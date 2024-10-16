@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
       "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -29,3 +29,5 @@ C:\Users\Mats\web-projects\app\itpe3200\FoodRegistrationTool\obj\Debug\net8.0\re
 C:\Users\Mats\web-projects\app\itpe3200\FoodRegistrationTool\obj\Debug\net8.0\FoodRegistrationTool.pdb
 C:\Users\Mats\web-projects\app\itpe3200\FoodRegistrationTool\obj\Debug\net8.0\FoodRegistrationTool.genruntimeconfig.cache
 C:\Users\Mats\web-projects\app\itpe3200\FoodRegistrationTool\obj\Debug\net8.0\ref\FoodRegistrationTool.dll
+C:\Users\Mats\web-projects\app\itpe3200\FoodRegistrationTool\bin\Debug\net8.0\package-lock.json
+C:\Users\Mats\web-projects\app\itpe3200\FoodRegistrationTool\bin\Debug\net8.0\package.json
