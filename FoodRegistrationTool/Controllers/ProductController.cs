@@ -9,7 +9,21 @@ namespace FoodRegistrationTool.Controllers;
 
 public class ProductController : Controller 
 {
-       public IActionResult Table()
+    public IActionResult Table()
+    {
+        var products = GetProducts();
+        ViewBag.CurrentViewName = "Table";
+        return View(products);       
+    }
+
+    public IActionResult Grid()
+    {
+        var products = GetProducts();
+        ViewBag.CurrentViewName = "Grid";
+        return View(products);
+    }
+
+    public List<Product> GetProducts()
     {
         var products = new List<Product>();
         var product1 = new Product
@@ -45,9 +59,7 @@ public class ProductController : Controller
         products.Add(product1);
         products.Add(product2);
         products.Add(product3);
-
-        ViewBag.CurrentViewName = "List of Registered Products";
-        return View(products);
+        return products;
 
     }
 
