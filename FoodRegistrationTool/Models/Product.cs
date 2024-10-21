@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+
 namespace FoodRegistrationTool.Models
 {
     public class Product
