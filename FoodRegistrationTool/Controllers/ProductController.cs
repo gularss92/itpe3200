@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.EntityFrameworkCore;
 
 namespace FoodRegistrationTool.Controllers;
 
@@ -18,24 +19,23 @@ public class ProductController : Controller
         _productDbContext = productDbContext;
     }
 
-    public IActionResult Table()
+    public async Task<IActionResult> Table()
     {
-        List<Product> products = _productDbContext.Products.ToList();
+        List<Product> products = await _productDbContext.Products.ToListAsync();
         var productsViewModel = new ProductsViewModel(products, "Table");
         return View(productsViewModel);       
     }
 
-    public IActionResult Grid()
+    public async Task<IActionResult> Grid()
     {
-        List<Product> products = _productDbContext.Products.ToList();
+        List<Product> products = await _productDbContext.Products.ToListAsync();
         var productsViewModel = new ProductsViewModel(products, "Grid");
         return View(productsViewModel);
     }
 
-    public IActionResult Details(int id)
+    public async Task<IActionResult> Details(int id)
     {
-        List<Product> products = _productDbContext.Products.ToList();
-        var product = products.FirstOrDefault(i => i.ProductId == id);
+        var product = await _productDbContext.Products.FirstOrDefaultAsync(i => i.ProductId == id);
         if (product == null)
         {
             return NotFound();
@@ -50,21 +50,21 @@ public class ProductController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Product product)
+    public async Task<IActionResult> Create(Product product)
     {
         if (ModelState.IsValid)
         {
             _productDbContext.Products.Add(product);
-            _productDbContext.SaveChanges();
+            await _productDbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Table));
         }
         return View(product);
     }
 
     [HttpGet]
-    public IActionResult Update(int id)
+    public async Task<IActionResult> Update(int id)
     {
-        var product = _productDbContext.Products.Find(id);
+        var product = await _productDbContext.Products.FindAsync(id);
         if (product == null)
         {
             return NotFound();
@@ -72,21 +72,21 @@ public class ProductController : Controller
         return View(product);
     }
     [HttpPost]
-    public IActionResult Update(Product product)
+    public async Task<IActionResult> Update(Product product)
     {
         if (ModelState.IsValid)
         {
             _productDbContext.Products.Update(product);
-            _productDbContext.SaveChanges();
+            await _productDbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Table));
         }
         return View(product);
     }
 
     [HttpGet]
-    public IActionResult Delete(int id)
+    public async Task<IActionResult> Delete(int id)
     {
-        var product = _productDbContext.Products.Find(id);
+        var product = await _productDbContext.Products.FindAsync(id);
         if (product == null)
         {
             return NotFound();
@@ -94,15 +94,15 @@ public class ProductController : Controller
         return View(product);
     }
     [HttpPost]
-    public IActionResult DeleteConfirmed(int id)
+    public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        var product = _productDbContext.Products.Find(id);
+        var product = await _productDbContext.Products.FindAsync(id);
         if (product == null)
         {
             return NotFound();
         }
         _productDbContext.Products.Remove(product);
-        _productDbContext.SaveChanges();
+        await _productDbContext.SaveChangesAsync();
         return RedirectToAction(nameof(Table));
     }
 
