@@ -10,23 +10,30 @@ namespace FoodRegistrationTool.Controllers;
 
 public class ProductController : Controller 
 {
+    private readonly ProductDbContext _productDbContext;
+
+    public ProductController(ProductDbContext productDbContext)
+    {
+        _productDbContext = productDbContext;
+    }
+
     public IActionResult Table()
     {
-        var products = GetProducts();
+        List<Product> products = _productDbContext.Products.ToList();
         var productsViewModel = new ProductsViewModel(products, "Table");
         return View(productsViewModel);       
     }
 
     public IActionResult Grid()
     {
-        var products = GetProducts();
+        List<Product> products = _productDbContext.Products.ToList();
         var productsViewModel = new ProductsViewModel(products, "Grid");
         return View(productsViewModel);
     }
 
     public IActionResult Details(int id)
     {
-        var products = GetProducts();
+        List<Product> products = _productDbContext.Products.ToList();
         var product = products.FirstOrDefault(i => i.ProductId == id);
         if (product == null)
         {
