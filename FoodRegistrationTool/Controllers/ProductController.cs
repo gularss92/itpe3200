@@ -1,5 +1,6 @@
 using FoodRegistrationTool.Models;
 using Microsoft.AspNetCore.Mvc;
+using FoodRegistrationTool.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +13,26 @@ public class ProductController : Controller
     public IActionResult Table()
     {
         var products = GetProducts();
-        ViewBag.CurrentViewName = "Table";
-        return View(products);       
+        var productsViewModel = new ProductsViewModel(products, "Table");
+        return View(productsViewModel);       
     }
 
     public IActionResult Grid()
     {
         var products = GetProducts();
-        ViewBag.CurrentViewName = "Grid";
-        return View(products);
+        var productsViewModel = new ProductsViewModel(products, "Grid");
+        return View(productsViewModel);
+    }
+
+    public IActionResult Details(int id)
+    {
+        var products = GetProducts();
+        var product = products.FirstOrDefault(i => i.ProductId == id);
+        if (product == null)
+        {
+            return NotFound();
+        }
+        return View(product);
     }
 
     public List<Product> GetProducts()
