@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\baguette.png",
+      "PackagePath": "staticwebassets\\images\\baguette.png"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\banana.jpg",
+      "PackagePath": "staticwebassets\\images\\banana.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\coke.jpg",
+      "PackagePath": "staticwebassets\\images\\coke.jpg"
+    },
+    {
       "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },
