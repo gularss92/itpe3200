@@ -6,6 +6,7 @@
             <th>Id</th>
             <th>Name</th>
             <th>Category</th>
+            <th>Nutrition (per 100g/ml)</th>
             <th>Price</th>
             <th>Description</th>
             <th>Image</th>
@@ -21,6 +22,7 @@
                        asp-route-id="@product.ProductId">@product.Name</a>
                 </td>
                 <td>@product.Category</td>
+                <td>@product.Nutrition</td>
                 <td>@product.Price.ToString("0.00 NOK")</td>
                 <td>@product.Description</td>
                 <td>

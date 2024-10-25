@@ -2,7 +2,7 @@
 
 <h2>Register new Product</h2>
 
-<form asp-action="Create">
+<form asp-action="Create" enctype="multipart/form-data" class="form-inline">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="Name"></label><span class="text-danger">*</span>
@@ -11,12 +11,20 @@
     </div>
     <div class="form-group">
         <label asp-for="Category"></label><span class="text-danger">*</span>
-        <input asp-for="Category" class="form-control" />
+        <select asp-for="Category" class="form-control" id="Category">
+            <option value="">Select Category</option>
+            <option value="Beverage">Beverage</option>
+            <option value="SolidFood">Solid Food</option>
+        </select>
         <span asp-validation-for="Category" class="text-danger"></span>
     </div>
-
     <div class="form-group">
-        <label asp-for="Price"></label><span class="text-danger">*</span>
+        <label asp-for="Nutrition"></label><span class="text-danger">*</span>
+        <input asp-for="Nutrition" id="nutritionInput" class="form-control" value="Calories: kcal, Saturated Fat: g, Sugar: g, Salt: mg, Fibre: g, Protein: g, Fruit/Vegetable: %"/>
+        <span asp-validation-for="Nutrition" class="text-danger">Per 100g/ml</span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Price (NOK)</label><span class="text-danger">*</span>
         <input asp-for="Price" class="form-control" />
         <span asp-validation-for="Price" class="text-danger"></span>
     </div>

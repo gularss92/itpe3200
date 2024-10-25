@@ -11,7 +11,7 @@ public class ProductDbContext : DbContext
     }
 
     public DbSet<Product> Products { get; set; }
-
+    
     // Lazy loading
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
