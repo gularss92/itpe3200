@@ -106,6 +106,13 @@ public class ProductController : Controller
         return RedirectToAction(nameof(Table));
     }
 
+    [HttpPost]
+    public async Task<IActionResult> CalculateNutritionScore(string category, int calories, double saturatedFat, double sugar, double salt, double fibre, double protein, int fruitOrVeg)
+    {
+        var score = CalculateNutrition.CalculateScore(category, calories, saturatedFat, sugar, salt, fibre, protein, fruitOrVeg);
+        return Json(score);
+    }
+
     // Hvis ikke benytter DB
     public List<Product> GetProducts()
     {

@@ -37,8 +37,16 @@
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\nutrition.js",
+      "PackagePath": "staticwebassets\\js\\nutrition.js"
+    },
+    {
       "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\table-nutrition.js",
+      "PackagePath": "staticwebassets\\js\\table-nutrition.js"
     },
     {
       "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\lib\\bootstrap\\LICENSE",

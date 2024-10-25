@@ -4,14 +4,22 @@
     @Model.Name
 </h3>
 
-<div class="row gx-5">
+<div class="row gx-5" enctype="multipart/form-data">
     <img alt="@Model.Name" src="@Model.ImageUrl" class="img-fluid col-5"/>
     <div class="col-7">
         <h5>@Model.Description</h5>
         <h3>@Model.Price.ToString("0.00 NOK")</h3>
         <h6>@Model.Nutrition</h6>
+        <h4 class="text-nowrap">
+            <span class="nutrition-score" data-score="@Model.NutriScore">@Model.NutriScore</span>
+        </h4>
         <hr/>
         <p><a class="btn btn-secondary" href="/Product/Table">Back to Table View<i style="margin-left: 10px;" class="fa">&#xf0ce;</i></a></p>
         <p><a class="btn btn-secondary" href="/Product/Grid">Back to Grid View<i style="margin-left: 10px;" class="material-icons">&#xe3ec;</i></a></p>
     </div>
 </div>
+
+@section Scripts
+{
+    <script src="~/js/nutrition-table.js"></script>
+}
