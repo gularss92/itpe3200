@@ -1,7 +1,7 @@
 @model ProductsViewModel
 
 <h1>List of Products Registered (@Model.CurrentViewName View)</h1>
-<a href="/Product/Table">Table View</a>
+<a href="/Product/Table">Table View<i style="margin-left: 5px;" class="fa">&#xf0ce;</i></a>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var product in Model.Products)

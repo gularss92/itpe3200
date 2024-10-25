@@ -2,7 +2,7 @@
 
 <h2>Update Product</h2>
 
-<form asp-action="Update">
+<form asp-action="Update" enctype="multipart/form-data">
     <input type="hidden" asp-for="ProductId" />
     <div class="form-group">
         <label asp-for="Name"></label>
@@ -10,9 +10,18 @@
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Category"></label>
-        <input asp-for="Category" class="form-control" />
+        <label asp-for="Category"></label><span class="text-danger">*</span>
+        <select asp-for="Category" class="form-control" id="Category">
+            <option value="">Select Category</option>
+            <option value="Beverage">Beverage</option>
+            <option value="SolidFood">Solid Food</option>
+        </select>
         <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nutrition"></label><span class="text-danger">*</span>
+        <input asp-for="Nutrition" id="nutritionInput" class="form-control" value="Calories: kcal, Saturated Fat: g, Sugar: g, Salt: mg, Fibre: g, Protein: g, Fruit/Vegetable: %"/>
+        <span asp-validation-for="Nutrition" class="text-danger">Per 100g/ml</span>
     </div>
     <div class="form-group">
         <label asp-for="Price"></label>
