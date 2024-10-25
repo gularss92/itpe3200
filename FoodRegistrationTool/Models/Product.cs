@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FoodRegistrationTool.Models
 {
@@ -11,8 +12,14 @@ namespace FoodRegistrationTool.Models
         // Maybe not neccessary
         public decimal Price { get; set; }
         public string? Description { get; set; }
+        [Display(Name = "Image")]
         public string? ImageUrl { get; set; }
         public string? NutriScore { get; set; }
+
+        // Doesn't put class in DB
+        [NotMapped]
+        [Display(Name = "Upload Image")]
+        public IFormFile? ImageFile { get; set; }
 
         // Navigation property
         //public virtual List<ProductRegister>? ProductRegisters { get; set; }

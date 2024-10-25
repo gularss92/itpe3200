@@ -14,9 +14,13 @@ public class ProductController : Controller
 {
     private readonly ProductDbContext _productDbContext;
 
-    public ProductController(ProductDbContext productDbContext)
+    // For image upload and viewing
+    private readonly IWebHostEnvironment _hostEnvironment;
+
+    public ProductController(ProductDbContext productDbContext, IWebHostEnvironment hostEnvironment)
     {
         _productDbContext = productDbContext;
+        _hostEnvironment = hostEnvironment;
     }
 
     public async Task<IActionResult> Table()
@@ -50,10 +54,35 @@ public class ProductController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(Product product)
+    public async Task<IActionResult> Create([Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
     {
         if (ModelState.IsValid)
         {
+            // Handle Image Upload
+            var imageFile = Request.Form.Files.FirstOrDefault();
+            if (imageFile != null)
+            {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(imageFile.FileName);
+                string extension = Path.GetExtension(imageFile.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath, "images", fileName);
+                //Console.WriteLine($"Attempting to save file to: {path}");
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await imageFile.CopyToAsync(fileStream);
+                }
+                product.ImageUrl = "/images/" + fileName;
+                //Console.Write($"Set url to: {product.ImageUrl}");
+
+            }
+            else
+            {
+                Console.Write($"No img found, url: {product.ImageUrl}, imgfile: {product.ImageFile}");
+
+            }
+
+            // Save product to DB
             _productDbContext.Products.Add(product);
             await _productDbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Table));
@@ -71,17 +100,61 @@ public class ProductController : Controller
         }
         return View(product);
     }
+    
     [HttpPost]
-    public async Task<IActionResult> Update(Product product)
+        public async Task<IActionResult> Update(int id, [Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
     {
+        if (id != product.ProductId)
+        {
+            return NotFound();
+        }
+        
         if (ModelState.IsValid)
         {
-            _productDbContext.Products.Update(product);
-            await _productDbContext.SaveChangesAsync();
+            try 
+            {
+                // Handle Image Upload
+                var imageFile = Request.Form.Files.FirstOrDefault();
+                if (imageFile != null)
+                {
+                    string wwwRootPath = _hostEnvironment.WebRootPath;
+                    string fileName = Path.GetFileNameWithoutExtension(imageFile.FileName);
+                    string extension = Path.GetExtension(imageFile.FileName);
+                    fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                    string path = Path.Combine(wwwRootPath + "/images", fileName);
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        await imageFile.CopyToAsync(fileStream);
+                    }
+                    product.ImageUrl = "/images/" + fileName;
+                
+                // Delete old image
+                    var oldImagePath = Path.Combine(wwwRootPath, "images", product.ImageUrl);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                _productDbContext.Products.Update(product);
+                await _productDbContext.SaveChangesAsync();
+
+            }
+            
+            catch (DbUpdateConcurrencyException)
+            {
+                if (product == null)
+                {
+                    return NotFound();
+                }
+                else throw;
+            }
+            
             return RedirectToAction(nameof(Table));
         }
         return View(product);
     }
+
 
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
