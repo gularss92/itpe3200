@@ -24,6 +24,12 @@
         <span asp-validation-for="Nutrition" class="text-danger">Per 100g/ml</span>
     </div>
     <div class="form-group">
+        <label asp-for="NutriScore">Nutrition Score:</label>
+        <div id="scoreWrapper" class="d-inline-block p-2 rounded">
+            <input asp-for="NutriScore" type="text" id="NutriScore" class="form-control" style="width: fit-content; background: transparent; border: none; color: inherit;" readonly/>
+        </div>
+    </div>
+    <div class="form-group">
         <label asp-for="Price">Price (NOK)</label><span class="text-danger">*</span>
         <input asp-for="Price" class="form-control" />
         <span asp-validation-for="Price" class="text-danger"></span>
@@ -41,3 +47,8 @@
     <button type="submit" class="btn btn-primary">Register</button>
     <a asp-action="Table" class="btn btn-secondary">Go Back</a>
 </form>
+
+@section Scripts 
+{
+    <script src="~/js/nutrition.js"></script> 
+}    

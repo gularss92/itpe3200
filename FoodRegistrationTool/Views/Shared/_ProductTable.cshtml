@@ -7,6 +7,7 @@
             <th>Name</th>
             <th>Category</th>
             <th>Nutrition (per 100g/ml)</th>
+            <th><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9421047/">Nutrition Score</a></th>
             <th>Price</th>
             <th>Description</th>
             <th>Image</th>
@@ -23,6 +24,9 @@
                 </td>
                 <td>@product.Category</td>
                 <td>@product.Nutrition</td>
+                <td>
+                    <span class="nutrition-score" data-score="@product.NutriScore">@product.NutriScore</span>
+                </td>
                 <td>@product.Price.ToString("0.00 NOK")</td>
                 <td>@product.Description</td>
                 <td>

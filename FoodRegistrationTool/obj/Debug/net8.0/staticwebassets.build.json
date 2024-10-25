@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LY3stDkW9GT5rSeYc/Xa65M5ODGxrML679UjOq2/jjs=",
+  "Hash": "FlbzUupltH3PKFyowI2MhMK9PBYzeClD0+a4WQQDea8=",
   "Source": "FoodRegistrationTool",
   "BasePath": "_content/FoodRegistrationTool",
   "Mode": "Default",
@@ -207,6 +207,25 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.min.js"
     },
     {
+      "Identity": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\nutrition.js",
+      "SourceId": "FoodRegistrationTool",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\",
+      "BasePath": "_content/FoodRegistrationTool",
+      "RelativePath": "js/nutrition.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\nutrition.js"
+    },
+    {
       "Identity": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\site.js",
       "SourceId": "FoodRegistrationTool",
       "SourceType": "Discovered",
@@ -224,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\table-nutrition.js",
+      "SourceId": "FoodRegistrationTool",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\",
+      "BasePath": "_content/FoodRegistrationTool",
+      "RelativePath": "js/table-nutrition.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\table-nutrition.js"
     },
     {
       "Identity": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

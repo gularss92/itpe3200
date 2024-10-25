@@ -20,3 +20,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.score-a { background-color: #2dc803; color: white; max-width: 50px; border-radius: 5px;}
+.score-b { background-color: #b5fd00; color: white; max-width: 100px; border-radius: 5px;}
+.score-c { background-color: #ffff00; color: rgb(0, 0, 0); max-width: 100px; border-radius: 5px;}
+.score-d { background-color: #fe8802; color: white; max-width: 100px; border-radius: 5px;}
+.score-e { background-color: #ff0000; color: white; max-width: 100px; border-radius: 5px;}

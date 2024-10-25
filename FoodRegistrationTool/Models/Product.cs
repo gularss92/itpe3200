@@ -12,6 +12,8 @@ namespace FoodRegistrationTool.Models
         public decimal Price { get; set; }
         public string? Description { get; set; }
         public string? ImageUrl { get; set; }
+        public string? NutriScore { get; set; }
+
         // Navigation property
         //public virtual List<ProductRegister>? ProductRegisters { get; set; }
 
