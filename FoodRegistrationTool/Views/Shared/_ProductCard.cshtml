@@ -2,15 +2,18 @@
 
 <div class="col mb-4">
     <div class="card h-100 shadow-sm border">
-        <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Name"/>
+        <img src="@Model.ImageUrl" class="card-img-top p-4" alt="@Model.Name" />
         <div class="card-body">
             <div class="card-title">
-                <h5 class="text-start">
+                <h5 class="h5 text-start">
                     <a asp-asp-controller="Product" asp-action="Details" asp-route-id="@Model.ProductId">@Model.Name</a>
                 </h5>
                 <h5 class="card-text">
                     <span class="nutrition-score" data-score="@Model.NutriScore">@Model.NutriScore</span>
                 </h5>
+                <p class="card-text">
+                    @Model.Nutrition
+                </p>
                 <p class="card-text">
                     @Model.Price.ToString("0.00 NOK")
                 </p>

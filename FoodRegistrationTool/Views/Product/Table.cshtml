@@ -1,6 +1,7 @@
 @model ProductsViewModel
+<div class="container">
+    <h1>List of Registered Products (@Model.CurrentViewName View)</h1>
+    <a href="/Product/Grid">Grid view<i class="material-icons">&#xe3ec;</i></a>
 
-<h1>List of Registered Products (@Model.CurrentViewName View)</h1>
-<a href="/Product/Grid">Grid view<i class="material-icons">&#xe3ec;</i></a>
-
-<partial name="_ProductTable" model="Model.Products"></partial>
+    <partial name="_ProductTable" model="Model.Products"></partial>
+</div>
