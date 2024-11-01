@@ -69,3 +69,12 @@ html, body {
   color: #6D2CF2;
   margin-bottom: 0;
 }
+
+.form-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+select {
+  font-family: 'FontAwesome', 'Second Font name';
+}
