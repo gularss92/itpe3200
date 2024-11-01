@@ -2511,19 +2511,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/kjellwiggo/.nuget/packages/": {}
+    "C:\\Users\\Mats\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
+      "projectUniqueName": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
       "projectName": "FoodRegistrationTool",
-      "projectPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
-      "packagesPath": "/Users/kjellwiggo/.nuget/packages/",
-      "outputPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/obj/",
+      "projectPath": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
+      "packagesPath": "C:\\Users\\Mats\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kjellwiggo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Mats\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2586,7 +2586,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

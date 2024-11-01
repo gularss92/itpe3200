@@ -1,60 +1,66 @@
 @model Product
 
-<h2>Update Product</h2>
+<div class="container">
 
-<form asp-action="Update" enctype="multipart/form-data">
-    <input type="hidden" asp-for="ProductId" />
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Category"></label><span class="text-danger">*</span>
-        <select asp-for="Category" class="form-control" id="Category">
-            <option value="">Select Category</option>
-            <option value="Beverage">Beverage</option>
-            <option value="SolidFood">Solid Food</option>
-        </select>
-        <span asp-validation-for="Category" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Nutrition"></label><span class="text-danger">*</span>
-        <input asp-for="Nutrition" id="nutritionInput" class="form-control" value="Calories: kcal, Saturated Fat: g, Sugar: g, Salt: mg, Fibre: g, Protein: g, Fruit/Vegetable: %"/>
-        <span asp-validation-for="Nutrition" class="text-danger">Per 100g/ml</span>
-    </div>
-    <div class="form-group">
-        <label asp-for="NutriScore">Nutrition Score:</label>
-        <div id="scoreWrapper" class="d-inline-block p-2 rounded">
-            <input asp-for="NutriScore" type="text" id="NutriScore" class="form-control" style="width: fit-content; background: transparent; border: none; color: inherit;" readonly/>
+    <h2>Update Product</h2>
+
+    <form asp-action="Update" enctype="multipart/form-data">
+        <input type="hidden" asp-for="ProductId" />
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" style="width: fit-content;"/>
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="Price"></label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <input asp-for="Description" class="form-control" />
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label style="margin-top: 10px;" asp-for="ImageFile">Image File:</label>
-        <input type="file" accept="image/*" asp-for="ImageFile" class="form-control-file" />
-        <span asp-validation-for="ImageFile" class="text-danger"></span>
-        <br></br>
-    </div>
+        <div class="form-group">
+            <label asp-for="Category"></label><span class="text-danger">*</span>
+            <select asp-for="Category" class="form-control" id="Category" style="width: min-content;">
+                <option value="">Select Category &#xf0d7;</option>
+                <option value="Beverage">Beverage</option>
+                <option value="SolidFood">Solid Food</option>
+            </select>
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Nutrition"></label><span class="text-danger">*</span>
+            <input asp-for="Nutrition" id="nutritionInput" class="form-control" value="Calories: kcal, Saturated Fat: g, Sugar: g, Salt: mg, Fibre: g, Protein: g, Fruit/Vegetable: %"/>
+            <span asp-validation-for="Nutrition" class="text-danger">Per 100g/ml</span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NutriScore">Nutrition Score:</label>
+            <div id="scoreWrapper" class="d-inline-block p-2 rounded">
+                <input asp-for="NutriScore" type="text" id="NutriScore" class="form-control" style="width: fit-content; background: transparent; border: none; color: inherit;" readonly/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" style="width: fit-content;"/>
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label style="margin-top: 10px;" asp-for="ImageFile">Image File:</label>
+            <input type="file" accept="image/*" asp-for="ImageFile" class="form-control-file" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+            <br></br>
+        </div>
 
-    @if (!string.IsNullOrEmpty(Model.ImageUrl))
-    {
-        <span>Old Image:</span>
-        <img src="@Model.ImageUrl" alt="@Model.Name" style="max-width: 200px; max-height: 200px;" />
-    }
-    <br></br>    
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-    <a asp-action="Table" class="btn btn-secondary">Cancel</a>
-</form>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <span>Old Image:</span>
+            <img src="@Model.ImageUrl" alt="@Model.Name" style="max-width: 200px; max-height: 200px;" />
+        }
+        <br></br>   
+        <p> 
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a asp-action="Table" class="btn btn-secondary">Cancel</a>
+        </p>
+    </form>
+</div>
+
 
 @section Scripts
 {

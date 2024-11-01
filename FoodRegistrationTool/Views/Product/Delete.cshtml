@@ -1,35 +1,40 @@
 @model Product
 
-<h2>Delete Product</h2>
+<div class="container">
 
-<h3>Are you sure you want to delete the chosen Product?</h3>
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">Product Id</dt>
-        <dd class="col-sm-10">@Model.ProductId</dd>
-        
-        <dt class="col-sm-2">Name</dt>
-        <dd class="col-sm-10">@Model.Name</dd>
+    <h2>Delete Product</h2>
 
-        <dt class="col-sm-2">Category</dt>
-        <dd class="col-sm-10">@Model.Category</dd>
+    <h3>Are you sure you want to delete the chosen Product?</h3>
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">Product Id</dt>
+            <dd class="col-sm-10">@Model.ProductId</dd>
 
-        <dt class="col-sm-2">Nutrition</dt>
-        <dd class="col-sm-10">@Model.Nutrition</dd>
-        
-        <dt class="col-sm-2">Price</dt>
-        <dd class="col-sm-10">@Model.Price</dd>
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@Model.Name</dd>
 
-        <dt class="col-sm-2">Description</dt>
-        <dd class="col-sm-10">@Model.Description</dd>
+            <dt class="col-sm-2">Category</dt>
+            <dd class="col-sm-10">@Model.Category</dd>
 
-        <dt class="col-sm-2">Image URL</dt>
-        <dd class="col-sm-10">@Model.ImageUrl</dd>
-    </dl>
-    <form asp-action="DeleteConfirmed" asp-route-id="@Model.ProductId" method="post">
-        <button type="submit" class="btn btn-danger">Delete</button>
-        <a asp-action="Table" class="btn btn-secondary">Cancel</a>
-    </form>
+            <dt class="col-sm-2">Nutrition</dt>
+            <dd class="col-sm-10">@Model.Nutrition</dd>
+
+            <dt class="col-sm-2">Price</dt>
+            <dd class="col-sm-10">@Model.Price</dd>
+
+            <dt class="col-sm-2">Description</dt>
+            <dd class="col-sm-10">@Model.Description</dd>
+
+            <dt class="col-sm-2">Image URL</dt>
+            <dd class="col-sm-10">@Model.ImageUrl</dd>
+        </dl>
+        <form asp-action="DeleteConfirmed" asp-route-id="@Model.ProductId" method="post">
+            <p>
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a asp-action="Table" class="btn btn-secondary">Cancel</a>
+            </p>
+        </form>
+    </div>
 </div>
