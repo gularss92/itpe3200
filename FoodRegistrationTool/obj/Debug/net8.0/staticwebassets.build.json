@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZtTNWebIN6OJj44wUUUcslCz7Yh3Le7jFVGdP235cPM=",
+  "Hash": "05hbMTLZD6o2HpiMv0q8wB/3g/eY9Wxkh1qj4o1XgHE=",
   "Source": "FoodRegistrationTool",
   "BasePath": "_content/FoodRegistrationTool",
   "Mode": "Default",
@@ -39288,6 +39288,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bremykt243612249.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\brunost240634362.webp",
+      "SourceId": "FoodRegistrationTool",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\",
+      "BasePath": "_content/FoodRegistrationTool",
+      "RelativePath": "images/brunost240634362.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\brunost240634362.webp"
     },
     {
       "Identity": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\brunost243421822.webp",

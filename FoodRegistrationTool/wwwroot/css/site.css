@@ -78,3 +78,97 @@ html, body {
 select {
   font-family: 'FontAwesome', 'Second Font name';
 }
+
+/* For table */
+/* Table Styles */
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Header Styles */
+.custom-table thead th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 1rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Body Styles */
+.custom-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Row Hover Effect */
+.custom-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease;
+}
+
+/* Product Image */
+.product-thumbnail {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Description Cell */
+.description-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Action Buttons */
+.btn-group .btn {
+  margin: 0 2px;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Nutrition Score Badge */
+.nutrition-score {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+/* Responsive Table */
+.table-responsive {
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Link Styles */
+.custom-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.custom-table a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Zebra Striping (optional) */
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
