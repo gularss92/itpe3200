@@ -8285,8 +8285,20 @@
       "PackagePath": "staticwebassets\\images\\carousel3.jpg"
     },
     {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\clientImages\\sisenor244444554.jpg",
+      "PackagePath": "staticwebassets\\images\\clientImages\\sisenor244444554.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\clientImages\\sketchBryter245323197.png",
+      "PackagePath": "staticwebassets\\images\\clientImages\\sketchBryter245323197.png"
+    },
+    {
       "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\coke.jpg",
       "PackagePath": "staticwebassets\\images\\coke.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\images\\pause1245215111.jpg",
+      "PackagePath": "staticwebassets\\images\\pause1245215111.jpg"
     },
     {
       "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\bootstrap.js",

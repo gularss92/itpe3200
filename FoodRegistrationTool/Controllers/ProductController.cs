@@ -66,13 +66,13 @@ public class ProductController : Controller
                 string fileName = Path.GetFileNameWithoutExtension(imageFile.FileName);
                 string extension = Path.GetExtension(imageFile.FileName);
                 fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                string path = Path.Combine(wwwRootPath, "images", fileName);
+                string path = Path.Combine(wwwRootPath, "images/clientImages", fileName);
                 //Console.WriteLine($"Attempting to save file to: {path}");
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     await imageFile.CopyToAsync(fileStream);
                 }
-                product.ImageUrl = "/images/" + fileName;
+                product.ImageUrl = "/images/clientImages/" + fileName;
                 //Console.Write($"Set url to: {product.ImageUrl}");
 
             }
@@ -121,15 +121,15 @@ public class ProductController : Controller
                     string fileName = Path.GetFileNameWithoutExtension(imageFile.FileName);
                     string extension = Path.GetExtension(imageFile.FileName);
                     fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                    string path = Path.Combine(wwwRootPath + "/images", fileName);
+                    string path = Path.Combine(wwwRootPath + "/images/clientImages", fileName);
                     using (var fileStream = new FileStream(path, FileMode.Create))
                     {
                         await imageFile.CopyToAsync(fileStream);
                     }
-                    product.ImageUrl = "/images/" + fileName;
+                    product.ImageUrl = "/images/clientImages/" + fileName;
                 
                 // Delete old image
-                    var oldImagePath = Path.Combine(wwwRootPath, "images", product.ImageUrl);
+                    var oldImagePath = Path.Combine(wwwRootPath, "images/clientImages", product.ImageUrl);
                     if (System.IO.File.Exists(oldImagePath))
                     {
                         System.IO.File.Delete(oldImagePath);
