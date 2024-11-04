@@ -47,3 +47,13 @@ button.accept-policy {
   line-height: 60px;
 }
 
+.nav-item:hover{
+  background-color:lightgray;
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.nav-item{
+  transition: 0.5s;
+}
+

@@ -47,3 +47,12 @@ button.accept-policy[b-4tz174352a] {
   line-height: 60px;
 }
 
+.nav-item:hover[b-4tz174352a]{
+  background-color:lightgray;
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.nav-item[b-4tz174352a]{
+  transition: 0.5s;
+}
