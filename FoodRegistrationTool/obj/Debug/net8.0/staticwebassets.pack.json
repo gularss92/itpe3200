@@ -8297,6 +8297,14 @@
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
+    },
+    {
       "Id": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\wwwroot\\js\\nutrition.js",
       "PackagePath": "staticwebassets\\js\\nutrition.js"
     },
