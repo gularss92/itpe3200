@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj": {}
+    "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj": {
+    "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
+        "projectUniqueName": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
         "projectName": "FoodRegistrationTool",
-        "projectPath": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
-        "packagesPath": "C:\\Users\\Mats\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mats\\web-projects\\app\\itpe3200\\FoodRegistrationTool\\obj\\",
+        "projectPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
+        "packagesPath": "/Users/kjellwiggo/.nuget/packages/",
+        "outputPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mats\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/kjellwiggo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -43,6 +43,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -56,6 +64,16 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
             }
           },
           "imports": [
@@ -77,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
