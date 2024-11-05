@@ -2,6 +2,7 @@ using FoodRegistrationTool.Models;
 using Microsoft.EntityFrameworkCore;
 using FoodRegistrationTool.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
+using FoodRegistrationTool.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ProductDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ProductDbContextConnection' not found.");
@@ -14,6 +15,8 @@ builder.Services.AddDbContext<ProductDbContext>(options =>
     options.UseSqlite(
         builder.Configuration["ConnectionStrings:ProductDbContextConnection"]);
 });
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ProductDbContext>();
 
