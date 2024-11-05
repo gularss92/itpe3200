@@ -7,10 +7,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FoodRegistrationTool.Controllers;
 
-public class ProductController : Controller 
+public class ProductController : Controller
 {
     private readonly ProductDbContext _productDbContext;
 
@@ -27,7 +28,7 @@ public class ProductController : Controller
     {
         List<Product> products = await _productDbContext.Products.ToListAsync();
         var productsViewModel = new ProductsViewModel(products, "Table");
-        return View(productsViewModel);       
+        return View(productsViewModel);
     }
 
     public async Task<IActionResult> Grid()
@@ -48,12 +49,14 @@ public class ProductController : Controller
     }
 
     [HttpGet]
+    [Authorize]
     public IActionResult Create()
     {
         return View();
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Create([Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
     {
         if (ModelState.IsValid)
@@ -91,6 +94,7 @@ public class ProductController : Controller
     }
 
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> Update(int id)
     {
         var product = await _productDbContext.Products.FindAsync(id);
@@ -100,18 +104,19 @@ public class ProductController : Controller
         }
         return View(product);
     }
-    
+
     [HttpPost]
-        public async Task<IActionResult> Update(int id, [Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
+    [Authorize]
+    public async Task<IActionResult> Update(int id, [Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
     {
         if (id != product.ProductId)
         {
             return NotFound();
         }
-        
+
         if (ModelState.IsValid)
         {
-            try 
+            try
             {
                 // Handle Image Upload
                 var imageFile = Request.Form.Files.FirstOrDefault();
@@ -127,8 +132,8 @@ public class ProductController : Controller
                         await imageFile.CopyToAsync(fileStream);
                     }
                     product.ImageUrl = "/images/clientImages/" + fileName;
-                
-                // Delete old image
+
+                    // Delete old image
                     var oldImagePath = Path.Combine(wwwRootPath, "images/clientImages", product.ImageUrl);
                     if (System.IO.File.Exists(oldImagePath))
                     {
@@ -140,7 +145,7 @@ public class ProductController : Controller
                 await _productDbContext.SaveChangesAsync();
 
             }
-            
+
             catch (DbUpdateConcurrencyException)
             {
                 if (product == null)
@@ -149,7 +154,7 @@ public class ProductController : Controller
                 }
                 else throw;
             }
-            
+
             return RedirectToAction(nameof(Table));
         }
         return View(product);
@@ -157,6 +162,7 @@ public class ProductController : Controller
 
 
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> Delete(int id)
     {
         var product = await _productDbContext.Products.FindAsync(id);
@@ -167,6 +173,7 @@ public class ProductController : Controller
         return View(product);
     }
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var product = await _productDbContext.Products.FindAsync(id);
