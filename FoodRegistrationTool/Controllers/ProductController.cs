@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using FoodRegistrationTool.DAL;
 
 namespace FoodRegistrationTool.Controllers;
 
