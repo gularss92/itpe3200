@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FoodRegistrationTool.Models;
 
-public class ProductDbContext : DbContext
+public class ProductDbContext : IdentityDbContext
 {
     public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
     {
@@ -11,7 +12,7 @@ public class ProductDbContext : DbContext
     }
 
     public DbSet<Product> Products { get; set; }
-    
+
     // Lazy loading
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
