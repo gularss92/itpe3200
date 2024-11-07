@@ -4,6 +4,7 @@ using FoodRegistrationTool.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using FoodRegistrationTool.DAL;
 
 #nullable disable
 

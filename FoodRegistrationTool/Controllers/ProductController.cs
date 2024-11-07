@@ -8,42 +8,43 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using FoodRegistrationTool.DAL;
 
 namespace FoodRegistrationTool.Controllers;
 
 public class ProductController : Controller
 {
-    private readonly ProductDbContext _productDbContext;
+    private readonly IProductRepository _productRepository;
 
     // For image upload and viewing
     private readonly IWebHostEnvironment _hostEnvironment;
 
-    public ProductController(ProductDbContext productDbContext, IWebHostEnvironment hostEnvironment)
+    public ProductController(IProductRepository productRepository, IWebHostEnvironment hostEnvironment)
     {
-        _productDbContext = productDbContext;
+        _productRepository = productRepository;
         _hostEnvironment = hostEnvironment;
     }
 
     public async Task<IActionResult> Table()
     {
-        List<Product> products = await _productDbContext.Products.ToListAsync();
+        var products = await _productRepository.GetAll();
         var productsViewModel = new ProductsViewModel(products, "Table");
         return View(productsViewModel);
     }
 
     public async Task<IActionResult> Grid()
     {
-        List<Product> products = await _productDbContext.Products.ToListAsync();
+        var products = await _productRepository.GetAll();
         var productsViewModel = new ProductsViewModel(products, "Grid");
         return View(productsViewModel);
     }
 
     public async Task<IActionResult> Details(int id)
     {
-        var product = await _productDbContext.Products.FirstOrDefaultAsync(i => i.ProductId == id);
+        var product = await _productRepository.GetProductById(id);
         if (product == null)
         {
-            return NotFound();
+            return BadRequest("Productt not found.");
         }
         return View(product);
     }
@@ -86,8 +87,7 @@ public class ProductController : Controller
             }
 
             // Save product to DB
-            _productDbContext.Products.Add(product);
-            await _productDbContext.SaveChangesAsync();
+            await _productRepository.Create(product);
             return RedirectToAction(nameof(Table));
         }
         return View(product);
@@ -97,7 +97,7 @@ public class ProductController : Controller
     [Authorize]
     public async Task<IActionResult> Update(int id)
     {
-        var product = await _productDbContext.Products.FindAsync(id);
+        var product = await _productRepository.GetProductById(id);
         if (product == null)
         {
             return NotFound();
@@ -141,8 +141,7 @@ public class ProductController : Controller
                     }
                 }
 
-                _productDbContext.Products.Update(product);
-                await _productDbContext.SaveChangesAsync();
+                await _productRepository.Update(product);
 
             }
 
@@ -165,7 +164,7 @@ public class ProductController : Controller
     [Authorize]
     public async Task<IActionResult> Delete(int id)
     {
-        var product = await _productDbContext.Products.FindAsync(id);
+        var product = await _productRepository.GetProductById(id);
         if (product == null)
         {
             return NotFound();
@@ -176,13 +175,7 @@ public class ProductController : Controller
     [Authorize]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        var product = await _productDbContext.Products.FindAsync(id);
-        if (product == null)
-        {
-            return NotFound();
-        }
-        _productDbContext.Products.Remove(product);
-        await _productDbContext.SaveChangesAsync();
+        await _productRepository.Delete(id);
         return RedirectToAction(nameof(Table));
     }
 
