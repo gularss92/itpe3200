@@ -8293,6 +8293,14 @@
       "PackagePath": "staticwebassets/images/clientImages/bigone.png"
     },
     {
+      "Id": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/images/clientImages/grandiosa245713709.jpg",
+      "PackagePath": "staticwebassets/images/clientImages/grandiosa245713709.jpg"
+    },
+    {
+      "Id": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/images/clientImages/lettmelk245959677.jpg",
+      "PackagePath": "staticwebassets/images/clientImages/lettmelk245959677.jpg"
+    },
+    {
       "Id": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/images/coke.jpg",
       "PackagePath": "staticwebassets/images/coke.jpg"
     },
