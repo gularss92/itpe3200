@@ -46,4 +46,9 @@ public class ProductRepository : IProductRepository
         await _db.SaveChangesAsync();
         return true;
     }
+
+    public async Task<Producer?> GetProducerById(int id)
+    {
+        return await _db.Producers.FindAsync(id);
+    }
 }
