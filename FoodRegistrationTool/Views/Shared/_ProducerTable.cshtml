@@ -1,0 +1,26 @@
+@model IEnumerable<Producer>
+
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        <@foreach (var producer in Model)
+        {
+            <tr>
+            <td>@producer.ProducerId</td>
+            <td>@producer.Name</td>
+            <td>@producer.Address</td>
+            <td>
+                    @if (@producer.Products != null)
+                    {
+                        <p>@string.Join(", ", @producer.Products.Select(product => $"Product{product.ProductId}"))</p>
+                    }
+            </td>
+            </tr>
+        }
+    </table>
+</div
