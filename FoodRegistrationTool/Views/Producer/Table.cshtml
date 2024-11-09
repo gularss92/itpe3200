@@ -2,6 +2,22 @@
 
 <div class="container">
     <h1>List of Producers</h1>
-
-    <partial name="_ProducerTable" model="Model" />
+    @foreach (var producer in Model)
+    {
+        <div class="container" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
+            <table class="table table-striped" style="max-width: 1200px;">
+                <tr class="table-header">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                </tr>
+                <tr>
+                    <td>@producer.ProducerId</td>
+                    <td>@producer.Name</td>
+                    <td>@producer.Address</td>
+                </tr>
+                <partial name="_ProducerProductTable" model="producer.Products" />
+            </table>
+        </div>
+    }
 </div>
