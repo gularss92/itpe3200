@@ -1,0 +1,19 @@
+@model IEnumerable<Product>
+
+<table class="table table-striped" style="max-width: 1200px;">
+    <tr class="table-header">
+        <th>Image</th>
+        <th>Product</th>
+        <th>Category</th>
+        <th>NutriScore</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td><img src="@product.ImageUrl" /></td>
+            <td>@product.Name</td>
+            <td>@product.Category</td>
+            <td>@product.NutriScore</td>
+        </tr>
+    }
+</table>

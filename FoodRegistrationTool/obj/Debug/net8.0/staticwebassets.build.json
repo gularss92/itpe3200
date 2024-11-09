@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YeFEwutKMAlT7D/FKqT6Yads6PE/p2Cu5/g5jXt834k=",
+  "Hash": "EqmuD3O8PmZdV3iy2C+53eKGqjhi2qsp+cPwssSSXrQ=",
   "Source": "FoodRegistrationTool",
   "BasePath": "_content/FoodRegistrationTool",
   "Mode": "Default",
@@ -40542,25 +40542,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/carousel3.jpg"
-    },
-    {
-      "Identity": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/images/clientImages/bigone241251177.png",
-      "SourceId": "FoodRegistrationTool",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/",
-      "BasePath": "_content/FoodRegistrationTool",
-      "RelativePath": "images/clientImages/bigone241251177.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/clientImages/bigone241251177.png"
     },
     {
       "Identity": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/images/coke.jpg",
