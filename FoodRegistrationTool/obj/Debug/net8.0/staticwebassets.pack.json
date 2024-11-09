@@ -8289,6 +8289,10 @@
       "PackagePath": "staticwebassets/images/carousel3.jpg"
     },
     {
+      "Id": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/images/clientImages/bigone241251177.png",
+      "PackagePath": "staticwebassets/images/clientImages/bigone241251177.png"
+    },
+    {
       "Id": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/wwwroot/images/coke.jpg",
       "PackagePath": "staticwebassets/images/coke.jpg"
     },

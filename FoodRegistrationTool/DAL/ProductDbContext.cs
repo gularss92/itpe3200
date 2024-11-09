@@ -13,6 +13,7 @@ public class ProductDbContext : IdentityDbContext
     }
 
     public DbSet<Product> Products { get; set; }
+    public DbSet<Producer> Producers { get; set; }
 
     // Lazy loading
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
