@@ -9,25 +9,33 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using FoodRegistrationTool.DAL;
+using System.Drawing.Printing;
 
 namespace FoodRegistrationTool.Controllers;
 
 public class ProductController : Controller
 {
     private readonly IProductRepository _productRepository;
+    private readonly ILogger<ProductController> _logger;
 
     // For image upload and viewing
     private readonly IWebHostEnvironment _hostEnvironment;
 
-    public ProductController(IProductRepository productRepository, IWebHostEnvironment hostEnvironment)
+    public ProductController(IProductRepository productRepository, IWebHostEnvironment hostEnvironment, ILogger<ProductController> logger)
     {
         _productRepository = productRepository;
         _hostEnvironment = hostEnvironment;
+        _logger = logger;
     }
 
     public async Task<IActionResult> Table()
     {
         var products = await _productRepository.GetAll();
+        if (products == null)
+        {
+            _logger.LogError("[ProductController] Product list not found while executing _productRepository.GetAll()");
+            return NotFound("Product list not found");
+        }
         var productsViewModel = new ProductsViewModel(products, "Table");
         return View(productsViewModel);
     }
@@ -35,6 +43,11 @@ public class ProductController : Controller
     public async Task<IActionResult> Grid()
     {
         var products = await _productRepository.GetAll();
+        if (products == null)
+        {
+            _logger.LogError("[ProductController] Product list not found while executing _productRepository.GetAll()");
+            return NotFound("Product list not found");
+        }
         var productsViewModel = new ProductsViewModel(products, "Grid");
         return View(productsViewModel);
     }
@@ -44,7 +57,8 @@ public class ProductController : Controller
         var product = await _productRepository.GetProductById(id);
         if (product == null)
         {
-            return BadRequest("Productt not found.");
+            _logger.LogError("[ProductController] Product not found for the ProductId {ProductId:0000}", id);
+            return NotFound("Product not found for the ProductId");
         }
         return View(product);
     }
@@ -60,6 +74,7 @@ public class ProductController : Controller
     [Authorize]
     public async Task<IActionResult> Create([Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description, ProducerId")] ProductCreateViewModel productCreateViewModel)
     {
+        // Må legge inn Logger her
         if (ModelState.IsValid)
         {
             // Getting producer by Id
@@ -121,7 +136,8 @@ public class ProductController : Controller
         var product = await _productRepository.GetProductById(id);
         if (product == null)
         {
-            return NotFound();
+            _logger.LogError("[ProductController] Product not found when updating the ProductId {ProductId:0000}", id);
+            return BadRequest("Product not found for the ProductId");
         }
         return View(product);
     }
@@ -130,6 +146,7 @@ public class ProductController : Controller
     [Authorize]
     public async Task<IActionResult> Update(int id, [Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
     {
+        // Må legge inn Logger her
         if (id != product.ProductId)
         {
             return NotFound();
@@ -188,7 +205,8 @@ public class ProductController : Controller
         var product = await _productRepository.GetProductById(id);
         if (product == null)
         {
-            return NotFound();
+            _logger.LogError("[ProductController] Product not found for the ProductId {ProductId:0000}", id);
+            return BadRequest("Product not found for the ProductId");
         }
         return View(product);
     }
@@ -196,7 +214,12 @@ public class ProductController : Controller
     [Authorize]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        await _productRepository.Delete(id);
+        bool returnOK = await _productRepository.Delete(id);
+        if (!returnOK)
+        {
+            _logger.LogError("[ProductController] Product deletion failed for the ProductId {ProductId:0000}", id);
+            return BadRequest("Item deletion failed");   
+        }
         return RedirectToAction(nameof(Table));
     }
 

@@ -1964,6 +1964,52 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
         }
       },
+      "Serilog/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Serilog.Extensions.Logging/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Serilog": "3.1.1"
+        },
+        "compile": {
+          "lib/net8.0/Serilog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Serilog.Sinks.File/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "4.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
         "type": "package",
         "dependencies": {
@@ -6083,6 +6129,77 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "Serilog/4.0.0": {
+      "sha512": "2jDkUrSh5EofOp7Lx5Zgy0EB+7hXjjxE2ktTb1WVQmU00lDACR2TdROGKU0K1pDTBSJBN1PqgYpgOZF8mL7NJw==",
+      "type": "package",
+      "path": "serilog/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net8.0/Serilog.dll",
+        "lib/net8.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "serilog.4.0.0.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
+    "Serilog.Extensions.Logging/8.0.0": {
+      "sha512": "YEAMWu1UnWgf1c1KP85l1SgXGfiVo0Rz6x08pCiPOIBt2Qe18tcZLvdBUuV5o1QHvrs8FAry9wTIhgBRtjIlEg==",
+      "type": "package",
+      "path": "serilog.extensions.logging/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Serilog.Extensions.Logging.dll",
+        "lib/net462/Serilog.Extensions.Logging.xml",
+        "lib/net6.0/Serilog.Extensions.Logging.dll",
+        "lib/net6.0/Serilog.Extensions.Logging.xml",
+        "lib/net7.0/Serilog.Extensions.Logging.dll",
+        "lib/net7.0/Serilog.Extensions.Logging.xml",
+        "lib/net8.0/Serilog.Extensions.Logging.dll",
+        "lib/net8.0/Serilog.Extensions.Logging.xml",
+        "lib/netstandard2.0/Serilog.Extensions.Logging.dll",
+        "lib/netstandard2.0/Serilog.Extensions.Logging.xml",
+        "lib/netstandard2.1/Serilog.Extensions.Logging.dll",
+        "lib/netstandard2.1/Serilog.Extensions.Logging.xml",
+        "serilog-extension-nuget.png",
+        "serilog.extensions.logging.8.0.0.nupkg.sha512",
+        "serilog.extensions.logging.nuspec"
+      ]
+    },
+    "Serilog.Sinks.File/6.0.0": {
+      "sha512": "lxjg89Y8gJMmFxVkbZ+qDgjl+T4yC5F7WSLTvA+5q0R04tfKVLRL/EHpYoJ/MEQd2EeCKDuylBIVnAYMotmh2A==",
+      "type": "package",
+      "path": "serilog.sinks.file/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Serilog.Sinks.File.dll",
+        "lib/net462/Serilog.Sinks.File.xml",
+        "lib/net471/Serilog.Sinks.File.dll",
+        "lib/net471/Serilog.Sinks.File.xml",
+        "lib/net6.0/Serilog.Sinks.File.dll",
+        "lib/net6.0/Serilog.Sinks.File.xml",
+        "lib/net8.0/Serilog.Sinks.File.dll",
+        "lib/net8.0/Serilog.Sinks.File.xml",
+        "lib/netstandard2.0/Serilog.Sinks.File.dll",
+        "lib/netstandard2.0/Serilog.Sinks.File.xml",
+        "serilog-sink-nuget.png",
+        "serilog.sinks.file.6.0.0.nupkg.sha512",
+        "serilog.sinks.file.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "sha512": "BmAf6XWt4TqtowmiWe4/5rRot6GerAeklmOPfviOvwLoF5WwgxcJHAxZtySuyW9r9w+HLILnm8VfJFLCUJYW8A==",
       "type": "package",
@@ -7003,28 +7120,33 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.6"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.6",
+      "Serilog.Extensions.Logging >= 8.0.0",
+      "Serilog.Sinks.File >= 6.0.0"
     ]
   },
   "packageFolders": {
-    "/Users/kjellwiggo/.nuget/packages/": {}
+    "C:\\Users\\gunna\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
+      "projectUniqueName": "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
       "projectName": "FoodRegistrationTool",
-      "projectPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
-      "packagesPath": "/Users/kjellwiggo/.nuget/packages/",
-      "outputPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/obj/",
+      "projectPath": "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
+      "packagesPath": "C:\\Users\\gunna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kjellwiggo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\gunna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7079,6 +7201,14 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.6, )"
+          },
+          "Serilog.Extensions.Logging": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "Serilog.Sinks.File": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           }
         },
         "imports": [
@@ -7100,7 +7230,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,130 @@
+2024-11-10 14:39:04.426 +01:00 [INF] User profile is available. Using 'C:\Users\gunna\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-10 14:39:04.679 +01:00 [INF] Now listening on: https://localhost:7109
+2024-11-10 14:39:04.681 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-10 14:39:04.685 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-10 14:39:04.688 +01:00 [INF] Hosting environment: Development
+2024-11-10 14:39:04.689 +01:00 [INF] Content root path: C:\Users\gunna\OneDrive\Documents\OsloMet\2024 Høst\ITPE3200 - Webapplikasjoner\Hjemmeeksamen\itpe3200\FoodRegistrationTool
+2024-11-10 14:39:05.042 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/ - null null
+2024-11-10 14:39:05.059 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/ - 307 0 null 17.6993ms
+2024-11-10 14:39:05.135 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ - null null
+2024-11-10 14:39:05.920 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-10 14:39:05.930 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodRegistrationTool.Controllers.HomeController (FoodRegistrationTool).
+2024-11-10 14:39:05.937 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-10 14:39:06.027 +01:00 [INF] Executed ViewResult - view Index executed in 90.5983ms.
+2024-11-10 14:39:06.030 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool) in 99.3424ms
+2024-11-10 14:39:06.030 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-10 14:39:06.036 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ - 200 null text/html; charset=utf-8 901.3676ms
+2024-11-10 14:39:06.112 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/FoodRegistrationTool.styles.css?v=Hr67B9dABJGJBmAP6iZ4ZvO-_kerlm0JGoyf6yDyF-o - null null
+2024-11-10 14:39:06.112 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/js/jquery.min.js - null null
+2024-11-10 14:39:06.112 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/css/site.css?v=uEmPehzlIw369i1BptkOLnQ5RrCxhB3f6xpIMtQU3MY - null null
+2024-11-10 14:39:06.112 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/css/bootstrap-icons/font/bootstrap-icons.min.css - null null
+2024-11-10 14:39:06.112 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/js/bootstrap.js - null null
+2024-11-10 14:39:06.123 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/js/table-nutrition.js - null null
+2024-11-10 14:39:06.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/js/jquery.validate.js - null null
+2024-11-10 14:39:06.139 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/js/jquery.validate.unobtrusive.js - null null
+2024-11-10 14:39:06.150 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/images/carousel3.jpg - null null
+2024-11-10 14:39:06.152 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/images/carousel2.jpg - null null
+2024-11-10 14:39:06.153 +01:00 [INF] The file /js/jquery.validate.unobtrusive.js was not modified
+2024-11-10 14:39:06.153 +01:00 [INF] The file /images/carousel2.jpg was not modified
+2024-11-10 14:39:06.155 +01:00 [INF] The file /FoodRegistrationTool.styles.css was not modified
+2024-11-10 14:39:06.155 +01:00 [INF] The file /js/bootstrap.js was not modified
+2024-11-10 14:39:06.155 +01:00 [INF] The file /js/jquery.min.js was not modified
+2024-11-10 14:39:06.155 +01:00 [INF] The file /css/site.css was not modified
+2024-11-10 14:39:06.155 +01:00 [INF] The file /css/bootstrap-icons/font/bootstrap-icons.min.css was not modified
+2024-11-10 14:39:06.155 +01:00 [INF] The file /js/table-nutrition.js was not modified
+2024-11-10 14:39:06.156 +01:00 [INF] The file /js/jquery.validate.js was not modified
+2024-11-10 14:39:06.156 +01:00 [INF] The file /images/carousel3.jpg was not modified
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/css/bootstrap-icons/font/bootstrap-icons.min.css - 304 null text/css 46.5553ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/js/bootstrap.js - 304 null text/javascript 46.3837ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/js/jquery.min.js - 304 null text/javascript 46.827ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/FoodRegistrationTool.styles.css?v=Hr67B9dABJGJBmAP6iZ4ZvO-_kerlm0JGoyf6yDyF-o - 304 null text/css 46.8145ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/js/table-nutrition.js - 304 null text/javascript 36.0106ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/js/jquery.validate.js - 304 null text/javascript 28.94ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/js/jquery.validate.unobtrusive.js - 304 null text/javascript 20.073ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/css/site.css?v=uEmPehzlIw369i1BptkOLnQ5RrCxhB3f6xpIMtQU3MY - 304 null text/css 46.8514ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/images/carousel3.jpg - 304 null image/jpeg 9.2364ms
+2024-11-10 14:39:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/images/carousel2.jpg - 304 null image/jpeg 6.6237ms
+2024-11-10 14:39:06.195 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/images/carousel1.jpg - null null
+2024-11-10 14:39:06.195 +01:00 [INF] The file /images/carousel1.jpg was not modified
+2024-11-10 14:39:06.195 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/images/carousel1.jpg - 304 null image/jpeg 0.4901ms
+2024-11-10 14:39:06.198 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/lib/jquery/dist/jquery.min.js - null null
+2024-11-10 14:39:06.199 +01:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2024-11-10 14:39:06.199 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/lib/jquery/dist/jquery.min.js - 304 null text/javascript 0.417ms
+2024-11-10 14:39:06.201 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2024-11-10 14:39:06.201 +01:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2024-11-10 14:39:06.201 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 0.5331ms
+2024-11-10 14:39:06.207 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2024-11-10 14:39:06.207 +01:00 [INF] The file /js/site.js was not modified
+2024-11-10 14:39:06.207 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 0.4688ms
+2024-11-10 14:39:06.264 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/css/bootstrap-icons/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2024-11-10 14:39:06.265 +01:00 [INF] The file /css/bootstrap-icons/font/fonts/bootstrap-icons.woff2 was not modified
+2024-11-10 14:39:06.265 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/css/bootstrap-icons/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 0.4899ms
+2024-11-10 14:39:12.708 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Producer/Table - null null
+2024-11-10 14:39:12.765 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-10 14:39:12.769 +01:00 [INF] Route matched with {action = "Table", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-10 14:39:13.062 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-10 14:39:13.217 +01:00 [INF] Executed ViewResult - view Table executed in 155.4586ms.
+2024-11-10 14:39:13.218 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 447.9492ms
+2024-11-10 14:39:13.218 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-10 14:39:13.219 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Producer/Table - 200 null text/html; charset=utf-8 510.7554ms
+2024-11-10 14:39:13.235 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/images/clientImages/bigone.png - null null
+2024-11-10 14:39:13.235 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/images/clientImages/lettmelk245959677.jpg - null null
+2024-11-10 14:39:13.235 +01:00 [INF] The file /images/clientImages/bigone.png was not modified
+2024-11-10 14:39:13.235 +01:00 [INF] The file /images/clientImages/lettmelk245959677.jpg was not modified
+2024-11-10 14:39:13.235 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/images/clientImages/bigone.png - 304 null image/png 0.5064ms
+2024-11-10 14:39:13.235 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/images/clientImages/lettmelk245959677.jpg - 304 null image/jpeg 0.7105ms
+2024-11-10 14:39:13.252 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/images/clientImages/grandiosa245713709.jpg - null null
+2024-11-10 14:39:13.253 +01:00 [INF] The file /images/clientImages/grandiosa245713709.jpg was not modified
+2024-11-10 14:39:13.253 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/images/clientImages/grandiosa245713709.jpg - 304 null image/jpeg 0.4534ms
+2024-11-10 14:39:14.231 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/Table - null null
+2024-11-10 14:39:14.288 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-10 14:39:14.291 +01:00 [INF] Route matched with {action = "Table", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-10 14:39:14.294 +01:00 [INF] This is an information message.
+2024-11-10 14:39:14.301 +01:00 [WRN] This is a warning message.
+2024-11-10 14:39:14.303 +01:00 [ERR] This is an error message.
+2024-11-10 14:39:14.312 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-10 14:39:14.322 +01:00 [INF] Executed ViewResult - view Table executed in 10.7883ms.
+2024-11-10 14:39:14.323 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool) in 31.8585ms
+2024-11-10 14:39:14.323 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-10 14:39:14.323 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/Table - 200 null text/html; charset=utf-8 91.6877ms
+2024-11-10 14:39:54.099 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/Details/1 - null null
+2024-11-10 14:39:54.109 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-10 14:39:54.117 +01:00 [INF] Route matched with {action = "Details", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-10 14:39:54.158 +01:00 [INF] Executing ViewResult, running view Details.
+2024-11-10 14:39:54.174 +01:00 [INF] Executed ViewResult - view Details executed in 16.3021ms.
+2024-11-10 14:39:54.174 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool) in 57.1804ms
+2024-11-10 14:39:54.174 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-10 14:39:54.175 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/Details/1 - 200 null text/html; charset=utf-8 75.5241ms
+2024-11-10 14:39:54.216 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/js/nutrition-table.js - null null
+2024-11-10 14:39:54.220 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/js/nutrition-table.js - 404 0 null 4.7573ms
+2024-11-10 14:39:54.221 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7109/js/nutrition-table.js, Response status code: 404
+2024-11-10 14:39:56.218 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/Table - null null
+2024-11-10 14:39:56.222 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-10 14:39:56.222 +01:00 [INF] Route matched with {action = "Table", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-10 14:39:56.223 +01:00 [INF] This is an information message.
+2024-11-10 14:39:56.225 +01:00 [WRN] This is a warning message.
+2024-11-10 14:39:56.230 +01:00 [ERR] This is an error message.
+2024-11-10 14:39:56.232 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-10 14:39:56.234 +01:00 [INF] Executed ViewResult - view Table executed in 2.3942ms.
+2024-11-10 14:39:56.235 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool) in 12.5325ms
+2024-11-10 14:39:56.235 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-10 14:39:56.235 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/Table - 200 null text/html; charset=utf-8 16.6747ms
+2024-11-10 14:39:59.083 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/Grid - null null
+2024-11-10 14:39:59.087 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-10 14:39:59.089 +01:00 [INF] Route matched with {action = "Grid", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-10 14:39:59.125 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-10 14:39:59.134 +01:00 [INF] Executed ViewResult - view Grid executed in 9.3148ms.
+2024-11-10 14:39:59.134 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool) in 44.487ms
+2024-11-10 14:39:59.134 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-10 14:39:59.134 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/Grid - 200 null text/html; charset=utf-8 51.8981ms
+2024-11-10 14:40:00.093 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/Table - null null
+2024-11-10 14:40:00.097 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-10 14:40:00.097 +01:00 [INF] Route matched with {action = "Table", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-10 14:40:00.099 +01:00 [INF] This is an information message.
+2024-11-10 14:40:00.100 +01:00 [WRN] This is a warning message.
+2024-11-10 14:40:00.102 +01:00 [ERR] This is an error message.
+2024-11-10 14:40:00.105 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-10 14:40:00.107 +01:00 [INF] Executed ViewResult - view Table executed in 2.7104ms.
+2024-11-10 14:40:00.108 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool) in 10.7048ms
+2024-11-10 14:40:00.109 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-10 14:40:00.112 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/Table - 200 null text/html; charset=utf-8 17.539ms
