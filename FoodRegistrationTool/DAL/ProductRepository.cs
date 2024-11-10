@@ -5,6 +5,9 @@ namespace FoodRegistrationTool.DAL;
 
 public class ProductRepository : IProductRepository
 {
+    //-----------------
+    // Product Methods
+    //-----------------
     private readonly ProductDbContext _db;
 
     public ProductRepository(ProductDbContext db)
@@ -47,7 +50,9 @@ public class ProductRepository : IProductRepository
         return true;
     }
 
+    //-----------------
     // Producer Methods
+    //-----------------
     public async Task<IEnumerable<Producer>> GetAllProducers()
     {
         return await _db.Producers.ToListAsync();
@@ -63,4 +68,45 @@ public class ProductRepository : IProductRepository
         await _db.SaveChangesAsync();
     }
 
+    public async Task UpdateProducer(Producer producer)
+    {
+        _db.Producers.Update(producer);
+        await _db.SaveChangesAsync();
+    }
+
+    // Delete Producer method
+    public async Task<bool> DeleteProducer(int id)
+    {
+        try
+        {
+            var producer = await _db.Producers.FindAsync(id);
+            if (producer == null)
+            {
+                // No producer found
+                return false;
+            }
+
+            var products = await _db.Products.Where(p => p.ProducerId == id).ToListAsync();
+            if (products.Count == 0)
+            {
+                // Producer has no products
+                _db.Producers.Remove(producer);
+            }
+            else
+            {
+                // Producer has products
+                _db.Products.RemoveRange(products);
+                _db.Producers.Remove(producer);
+            }
+
+            await _db.SaveChangesAsync();
+            return true;
+        }
+        catch (Exception e)
+        {
+            // Logg feilen her om nødvendig
+            // f.eks. _logger.LogError(ex, "Feil ved sletting av produsent med id {Id}", id);
+            return false;
+        }
+    }
 }
