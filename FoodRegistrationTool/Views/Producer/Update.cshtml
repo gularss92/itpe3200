@@ -1,10 +1,10 @@
 @model Producer
 
 <div class="container">
-    <h2>Register new Producer</h2>
-    <form asp-action="Create" enctype="multipart/form-data" class="form-inline">
+    <h2>Update new Producer</h2>
+    <form asp-action="Update" enctype="multipart/form-data" class="form-inline">
 
-        <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="hidden" asp-for="ProducerId" />
         <div class="form-group">
             <label asp-for="Name"></label><span class="text-danger">*</span>
             <input asp-for="Name" class="form-control" style="width: fit-content;" />
@@ -17,7 +17,7 @@
         </div>
         <p>
             <a asp-action="Table" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Back</a>
-            <button type="submit" class="btn btn-primary"><i class="bi bi-floppy"></i> Register</button>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-floppy"></i> Update</button>
         </p>
     </form>
 </div>

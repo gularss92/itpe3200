@@ -8,7 +8,8 @@
                 <th>Name</th>
                 <th>Category</th>
                 <th>Nutrition</th>
-                <th><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9421047/" target="_blank" title="Nutri-Score Article">Score</a></th>
+                <th><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9421047/" target="_blank"
+                        title="Nutri-Score Article">Score</a></th>
                 <th>Price</th>
                 <th>Description</th>
                 <th>Image</th>
@@ -21,9 +22,7 @@
                 <tr>
                     <td>@product.ProductId</td>
                     <td>
-                        <a asp-controller="Product" 
-                           asp-action="Details" 
-                           asp-route-id="@product.ProductId">@product.Name</a>
+                        <a asp-controller="Product" asp-action="Details" asp-route-id="@product.ProductId">@product.Name</a>
                     </td>
                     <td>@product.Category</td>
                     <td>@product.Nutrition</td>
@@ -44,10 +43,10 @@
                     </td>
                     <td>
                         <div class="btn-group">
-                            <a asp-action="Update" asp-route-id="@product.ProductId" 
-                               class="btn btn-sm btn-outline-primary">Update</a>
-                            <a asp-action="Delete" asp-route-id="@product.ProductId" 
-                               class="btn btn-sm btn-outline-danger">Delete</a>
+                            <a asp-action="Update" asp-route-id="@product.ProductId"
+                                class="btn btn-sm btn-outline-primary">Update</a>
+                            <a asp-action="Delete" asp-route-id="@product.ProductId"
+                                class="btn btn-sm btn-outline-danger">Delete</a>
                         </div>
                     </td>
                 </tr>
@@ -55,8 +54,3 @@
         </tbody>
     </table>
 </div>
-<p>
-    <a class="btn btn-primary" 
-       asp-controller="Product" 
-       asp-action="Create">Register New Product</a>
-</p>

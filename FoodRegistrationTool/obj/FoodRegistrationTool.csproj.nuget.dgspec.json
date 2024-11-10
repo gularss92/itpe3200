@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj": {}
+    "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj": {
+    "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
+        "projectUniqueName": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
         "projectName": "FoodRegistrationTool",
-        "projectPath": "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\FoodRegistrationTool.csproj",
-        "packagesPath": "C:\\Users\\gunna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gunna\\OneDrive\\Documents\\OsloMet\\2024 Høst\\ITPE3200 - Webapplikasjoner\\Hjemmeeksamen\\itpe3200\\FoodRegistrationTool\\obj\\",
+        "projectPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/FoodRegistrationTool.csproj",
+        "packagesPath": "/Users/kjellwiggo/.nuget/packages/",
+        "outputPath": "/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gunna\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kjellwiggo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -106,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
