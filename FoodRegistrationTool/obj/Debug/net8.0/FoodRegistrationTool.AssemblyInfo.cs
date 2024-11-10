@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoodRegistrationTool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbe408d51a8ed5ba3c661c10976529ae1d6751a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bb45170280e37af54a7439a9025a1992a7c1e6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoodRegistrationTool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoodRegistrationTool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

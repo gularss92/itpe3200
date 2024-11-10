@@ -49,19 +49,24 @@ html, body {
 
 .section-dark {
   color: white;
-  background-color: #0c041c;
+  background-color: #1c0941;
 }
 
 .section-dark .feature-card {
   color: #6D2CF2;
   /*background-color: #212529;*/
-  background-color: #0c041c;
+  background-color: #1c0941;
   border: 0;
 }
 
 .section-color {
   color: white;
   background-color: #6D2CF2;
+}
+
+.footer-custom {
+  color: #6D2CF2;
+  background-color: #1c0941;
 }
 
 .icon {
