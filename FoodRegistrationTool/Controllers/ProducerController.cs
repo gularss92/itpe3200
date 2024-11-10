@@ -16,12 +16,14 @@ public class ProducerController : Controller
         _productRepository = productRepository;
     }
 
+    // Table view
     public async Task<IActionResult> Table()
     {
         var producers = await _productRepository.GetAllProducers();
         return View(producers);
     }
 
+    // Create Producer
     [HttpGet]
     [Authorize]
     public IActionResult Create()
@@ -35,11 +37,56 @@ public class ProducerController : Controller
     {
         if (ModelState.IsValid)
         {
-            // Save product to DB
+            // Save producer in DB
             await _productRepository.CreateProducer(producer);
             return RedirectToAction(nameof(Table));
         }
         return View(producer);
     }
 
+    // Update Producer
+    [HttpGet]
+    [Authorize]
+    public async Task<IActionResult> Update(int id)
+    {
+        var producer = await _productRepository.GetProducerById(id);
+        if (producer == null)
+        {
+            return NotFound();
+        }
+        return View(producer);
+    }
+
+    [HttpPost]
+    [Authorize]
+    public async Task<IActionResult> Update(Producer producer)
+    {
+        if (ModelState.IsValid)
+        {
+            await _productRepository.UpdateProducer(producer);
+            return RedirectToAction(nameof(Table));
+        }
+        return View(producer);
+    }
+
+    // Delete Producer
+    [HttpGet]
+    [Authorize]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var producer = await _productRepository.GetProducerById(id);
+        if (producer == null)
+        {
+            return NotFound();
+        }
+        return View(producer);
+    }
+
+    [HttpPost]
+    [Authorize]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        await _productRepository.DeleteProducer(id);
+        return RedirectToAction(nameof(Table));
+    }
 }

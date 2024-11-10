@@ -55,23 +55,62 @@ public class ProductRepository : IProductRepository
     //-----------------
     public async Task<IEnumerable<Producer>> GetAllProducers()
     {
-        return await _db.Producers.ToListAsync();
+        try
+        {
+            return await _db.Producers.ToListAsync();
+        }
+        catch (Exception e)
+        {
+            // Logg feilen her hvis nødvendig, f.eks.:
+            // _logger.LogError(ex, "Feil ved henting av alle produsenter");
+            return Enumerable.Empty<Producer>(); // Returnerer en tom liste ved feil
+        }
     }
+
     public async Task<Producer?> GetProducerById(int id)
     {
-        return await _db.Producers.FindAsync(id);
+        try
+        {
+            return await _db.Producers.FindAsync(id);
+        }
+        catch (Exception e)
+        {
+            // Logg feilen her hvis nødvendig, f.eks.:
+            // _logger.LogError(ex, "Feil ved henting av produsent med id {Id}", id);
+            return null; // Returnerer null ved feil
+        }
     }
 
-    public async Task CreateProducer(Producer producer)
+    public async Task<bool> CreateProducer(Producer producer)
     {
-        _db.Producers.Add(producer);
-        await _db.SaveChangesAsync();
+        try
+        {
+            _db.Producers.Add(producer);
+            await _db.SaveChangesAsync();
+            return true;
+        }
+        catch (Exception e)
+        {
+            // Logg feilen her hvis nødvendig, for eksempel:
+            // _logger.LogError(ex, "Feil ved oppretting av produsent");
+            return false;
+        }
     }
 
-    public async Task UpdateProducer(Producer producer)
+    public async Task<bool> UpdateProducer(Producer producer)
     {
-        _db.Producers.Update(producer);
-        await _db.SaveChangesAsync();
+        try
+        {
+            _db.Producers.Update(producer);
+            await _db.SaveChangesAsync();
+            return true;
+        }
+        catch (Exception e)
+        {
+            // Logg feilen her hvis nødvendig, for eksempel:
+            // _logger.LogError(ex, "Feil ved oppdatering av produsent");
+            return false;
+        }
     }
 
     // Delete Producer method
