@@ -5,7 +5,7 @@
     <div class="alert alert-danger" role="alert">
         <strong>Warning! </strong> This will also delete all products registered to @Model.Name!
     </div>
-    <form asp-action="Delete" enctype="multipart/form-data" class="form-inline">
+    <form asp-action="DeleteConfirmed" enctype="multipart/form-data" class="form-inline">
 
         <input type="hidden" asp-for="ProducerId" />
         <div class="form-group">
