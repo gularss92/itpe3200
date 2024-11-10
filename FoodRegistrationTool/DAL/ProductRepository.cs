@@ -46,4 +46,21 @@ public class ProductRepository : IProductRepository
         await _db.SaveChangesAsync();
         return true;
     }
+
+    // Producer Methods
+    public async Task<IEnumerable<Producer>> GetAllProducers()
+    {
+        return await _db.Producers.ToListAsync();
+    }
+    public async Task<Producer?> GetProducerById(int id)
+    {
+        return await _db.Producers.FindAsync(id);
+    }
+
+    public async Task CreateProducer(Producer producer)
+    {
+        _db.Producers.Add(producer);
+        await _db.SaveChangesAsync();
+    }
+
 }

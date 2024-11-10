@@ -58,10 +58,32 @@ public class ProductController : Controller
 
     [HttpPost]
     [Authorize]
-    public async Task<IActionResult> Create([Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
+    public async Task<IActionResult> Create([Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description, ProducerId")] ProductCreateViewModel productCreateViewModel)
     {
         if (ModelState.IsValid)
         {
+            // Getting producer by Id
+            var producer = await _productRepository.GetProducerById(productCreateViewModel.ProducerId);
+
+            // Checking producer exists
+            if (producer == null)
+            {
+                return BadRequest("Producer not found.");
+            }
+
+            // Creating Product object
+            var product = new Product
+            {
+                Name = productCreateViewModel.Name,
+                Category = productCreateViewModel.Category,
+                Nutrition = productCreateViewModel.Nutrition,
+                Price = productCreateViewModel.Price,
+                Description = productCreateViewModel.Description,
+                NutriScore = productCreateViewModel.NutriScore,
+                ProducerId = productCreateViewModel.ProducerId,
+                Producer = producer // Sett produsenten til produktet
+            };
+
             // Handle Image Upload
             var imageFile = Request.Form.Files.FirstOrDefault();
             if (imageFile != null)
@@ -83,14 +105,13 @@ public class ProductController : Controller
             else
             {
                 Console.Write($"No img found, url: {product.ImageUrl}, imgfile: {product.ImageFile}");
-
             }
 
             // Save product to DB
             await _productRepository.Create(product);
             return RedirectToAction(nameof(Table));
         }
-        return View(product);
+        return View(productCreateViewModel);
     }
 
     [HttpGet]

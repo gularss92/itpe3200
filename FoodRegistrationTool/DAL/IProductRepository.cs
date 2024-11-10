@@ -9,4 +9,7 @@ public interface IProductRepository
     Task Create(Product product);
     Task Update(Product product);
     Task<bool> Delete(int id);
+    Task<IEnumerable<Producer>> GetAllProducers();
+    Task<Producer?> GetProducerById(int id);
+    Task CreateProducer(Producer producer);
 }
