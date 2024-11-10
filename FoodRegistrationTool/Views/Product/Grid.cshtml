@@ -2,7 +2,12 @@
 
 <div class="container">
     <h1>List of Products Registered (@Model.CurrentViewName View)</h1>
-    <a href="/Product/Table">Table View<i style="margin-left: 5px;" class="fa">&#xf0ce;</i></a>
+    <div class="btn-group mb-2">
+        <a href="/Product/Table" class="btn btn-outline-primary"><i class="bi bi-table"></i></a>
+        <a href="/Product/Grid" class="btn btn-outline-primary active"><i class="bi bi-grid"></i></a>
+    </div>
+    <a class="btn btn-primary mb-2" asp-controller="Product" asp-action="Create"><i class="bi bi-pencil-square"></i>
+        New</a>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach (var product in Model.Products)

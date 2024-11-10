@@ -34,6 +34,11 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
+h1, h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 .main-container {
   flex: 1;
 }
@@ -178,5 +183,17 @@ select {
   background-color: #f9f9f9;
 }
 
+/* Fixed image height for cards */
+.fixed-height-img-card {
+  height: 300px; 
+  object-fit:contain; 
+  width: 100%; 
+}
+
+/* Fixed image height for cards */
+.fixed-height-img-details {
+  height: 500px; 
+  object-fit:contain; 
+}
 
 
