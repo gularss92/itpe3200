@@ -194,8 +194,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjZXIvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/Views/Producer/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjZXIvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/Views/Producer/Table.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjZXIvVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/Views/Producer/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjZXIvVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/Views/Product/Create.cshtml]

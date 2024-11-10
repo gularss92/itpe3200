@@ -1,0 +1,23 @@
+@model Producer
+
+<div class="container">
+    <h2>Update new Producer</h2>
+    <form asp-action="Update" enctype="multipart/form-data" class="form-inline">
+
+        <input type="hidden" asp-for="ProducerId" />
+        <div class="form-group">
+            <label asp-for="Name"></label><span class="text-danger">*</span>
+            <input asp-for="Name" class="form-control" style="width: fit-content;" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address"></label><span class="text-danger">*</span>
+            <input asp-for="Address" class="form-control" style="width: fit-content;" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <p>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a asp-action="Table" class="btn btn-secondary">Go Back</a>
+        </p>
+    </form>
+</div>
