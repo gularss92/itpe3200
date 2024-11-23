@@ -42,7 +42,7 @@ public class ProductRepository : IProductRepository
             _logger.LogError("[ProductRepository] item FindAsync(id) failed when GetProductById for ProductId {ProductId:0000}, error message: {e}", id, e.Message);
             return null;
         }
-        
+
     }
 
     public async Task<bool> Create(Product product)
@@ -58,7 +58,7 @@ public class ProductRepository : IProductRepository
             _logger.LogError("[ProductRepository] item creation failed for product {@product}, error message: {e}", product, e.Message);
             return false;
         }
-        
+
     }
 
     public async Task<bool> Update(Product product)
@@ -71,10 +71,10 @@ public class ProductRepository : IProductRepository
         }
         catch (Exception e)
         {
-           _logger.LogError("[ProductRepository] product FindAsync(id) failed when updating the ProductId {ProductId:0000}, error message: {e}", product, e.Message);
-            return false; 
+            _logger.LogError("[ProductRepository] product FindAsync(id) failed when updating the ProductId {ProductId:0000}, error message: {e}", product, e.Message);
+            return false;
         }
-        
+
     }
 
     public async Task<bool> Delete(int id)
@@ -97,7 +97,7 @@ public class ProductRepository : IProductRepository
             _logger.LogError("[ProductRepository] product deletion failed for the ProductId {ProductId:0000}, error message: {e}", id, e.Message);
             return false;
         }
-        
+
     }
 
     //-----------------
@@ -111,8 +111,7 @@ public class ProductRepository : IProductRepository
         }
         catch (Exception e)
         {
-            // Logg feilen her hvis nødvendig, f.eks.:
-            // _logger.LogError(ex, "Feil ved henting av alle produsenter");
+            _logger.LogError("[ProductRepository] producers ToListAsync() failed when GetAllProducers(), error message: {e}", e.Message);
             return Enumerable.Empty<Producer>(); // Returnerer en tom liste ved feil
         }
     }
@@ -125,8 +124,7 @@ public class ProductRepository : IProductRepository
         }
         catch (Exception e)
         {
-            // Logg feilen her hvis nødvendig, f.eks.:
-            // _logger.LogError(ex, "Feil ved henting av produsent med id {Id}", id);
+            _logger.LogError("[ProductRepository] producer FindAsync(id) failed when GetProducerById for ProducerId {ProducerId:0000}, error message: {e}", id, e.Message);
             return null; // Returnerer null ved feil
         }
     }
@@ -141,8 +139,7 @@ public class ProductRepository : IProductRepository
         }
         catch (Exception e)
         {
-            // Logg feilen her hvis nødvendig, for eksempel:
-            // _logger.LogError(ex, "Feil ved oppretting av produsent");
+            _logger.LogError("[ProductRepository] producer SaveChangesAsync() creation failed for producer {@producer}, error message: {e}", producer, e.Message);
             return false;
         }
     }
@@ -157,8 +154,7 @@ public class ProductRepository : IProductRepository
         }
         catch (Exception e)
         {
-            // Logg feilen her hvis nødvendig, for eksempel:
-            // _logger.LogError(ex, "Feil ved oppdatering av produsent");
+            _logger.LogError("[ProductRepository] producer SaveChangesAsync() failed when updating the Producer {@producer}, error message: {e}", producer, e.Message);
             return false;
         }
     }
@@ -172,6 +168,7 @@ public class ProductRepository : IProductRepository
             if (producer == null)
             {
                 // No producer found
+                _logger.LogError("[ProductRepository] producer not found for the ProducerId {ProducerId:0000}", id);
                 return false;
             }
 
@@ -193,8 +190,7 @@ public class ProductRepository : IProductRepository
         }
         catch (Exception e)
         {
-            // Logg feilen her om nødvendig
-            // f.eks. _logger.LogError(ex, "Feil ved sletting av produsent med id {Id}", id);
+            _logger.LogError("[ProductRepository] producer deletion failed for the ProducerId {ProducerId:0000}, error message: {e}", id, e.Message);
             return false;
         }
     }
