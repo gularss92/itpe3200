@@ -61,3 +61,4 @@
 2024-11-23 22:20:00.900 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 4.3365ms
 2024-11-23 22:20:00.900 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
 2024-11-23 22:20:00.900 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Table - 200 null text/html; charset=utf-8 5.6964ms
+2024-11-23 22:32:19.192 +01:00 [INF] Application is shutting down...
