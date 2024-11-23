@@ -35,8 +35,8 @@ public class ProducerControllerTests
         // Assert
         var viewResult = Assert.IsType<ViewResult>(result);
         var model = Assert.IsAssignableFrom<IEnumerable<Producer>>(viewResult.Model);
-        Assert.Equal(2, model.Count()); // Asserts the number of objects
-        Assert.Equal(producers, model); // Asserts that the result objects match the input
+        Assert.Equal(2, model.Count());
+        Assert.Equal(producers, model);
     }
 
     // Negative test - Table returns NotFound
