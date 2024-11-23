@@ -1,0 +1,28 @@
+2024-11-23 21:39:38.144 +01:00 [INF] User profile is available. Using '/Users/kjellwiggo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-23 21:39:38.193 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-23 21:39:38.194 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-23 21:39:38.194 +01:00 [INF] Hosting environment: Development
+2024-11-23 21:39:38.194 +01:00 [INF] Content root path: /Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool
+2024-11-23 21:39:43.945 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/ - null null
+2024-11-23 21:39:43.948 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-11-23 21:39:43.964 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-23 21:39:43.972 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodRegistrationTool.Controllers.HomeController (FoodRegistrationTool).
+2024-11-23 21:39:43.974 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-23 21:39:44.426 +01:00 [INF] Executed ViewResult - view Index executed in 451.0462ms.
+2024-11-23 21:39:44.427 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool) in 454.875ms
+2024-11-23 21:39:44.427 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-23 21:39:44.442 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/ - 200 null text/html; charset=utf-8 498.0619ms
+2024-11-23 21:39:44.443 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/FoodRegistrationTool.styles.css?v=-rXHweyj8R1Srhz14u2t5C6l8wvZ9AmWgOYZ4nRx8jA - null null
+2024-11-23 21:39:44.447 +01:00 [INF] Sending file. Request path: '/FoodRegistrationTool.styles.css'. Physical path: '/Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool/obj/Debug/net8.0/scopedcss/bundle/FoodRegistrationTool.styles.css'
+2024-11-23 21:39:44.447 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/FoodRegistrationTool.styles.css?v=-rXHweyj8R1Srhz14u2t5C6l8wvZ9AmWgOYZ4nRx8jA - 200 1241 text/css 4.2741ms
+2024-11-23 21:39:46.426 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Table - null null
+2024-11-23 21:39:46.429 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-23 21:39:46.434 +01:00 [INF] Route matched with {action = "Table", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-23 21:39:46.553 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-23 21:39:46.609 +01:00 [INF] Executed ViewResult - view Table executed in 55.8151ms.
+2024-11-23 21:39:46.609 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 174.7695ms
+2024-11-23 21:39:46.609 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-23 21:39:46.609 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Table - 200 null text/html; charset=utf-8 183.7566ms
+2024-11-23 21:39:46.621 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/FoodRegistrationTool.styles.css?v=-rXHweyj8R1Srhz14u2t5C6l8wvZ9AmWgOYZ4nRx8jA - null null
+2024-11-23 21:39:46.622 +01:00 [INF] The file /FoodRegistrationTool.styles.css was not modified
+2024-11-23 21:39:46.622 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/FoodRegistrationTool.styles.css?v=-rXHweyj8R1Srhz14u2t5C6l8wvZ9AmWgOYZ4nRx8jA - 304 null text/css 0.4059ms
