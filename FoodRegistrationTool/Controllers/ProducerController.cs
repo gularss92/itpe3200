@@ -4,16 +4,17 @@ using FoodRegistrationTool.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 
-
 namespace FoodRegistrationTool.Controllers;
 
 public class ProducerController : Controller
 {
     private readonly IProductRepository _productRepository;
+    private readonly ILogger<ProducerController> _logger;
 
-    public ProducerController(IProductRepository productRepository)
+    public ProducerController(IProductRepository productRepository, ILogger<ProducerController> logger)
     {
         _productRepository = productRepository;
+        _logger = logger;
     }
 
     // Table view
