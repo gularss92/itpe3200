@@ -1,0 +1,68 @@
+2024-11-23 22:11:22.836 +01:00 [INF] User profile is available. Using '/Users/kjellwiggo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-23 22:11:22.882 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-23 22:11:22.884 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-23 22:11:22.884 +01:00 [INF] Hosting environment: Development
+2024-11-23 22:11:22.884 +01:00 [INF] Content root path: /Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool
+2024-11-23 22:11:25.877 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Table - null null
+2024-11-23 22:11:25.881 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-11-23 22:11:25.899 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-23 22:11:25.908 +01:00 [INF] Route matched with {action = "Table", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-23 22:11:26.204 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-23 22:11:26.306 +01:00 [INF] Executed ViewResult - view Table executed in 102.2395ms.
+2024-11-23 22:11:26.307 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 398.7885ms
+2024-11-23 22:11:26.307 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-23 22:11:26.309 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Table - 200 null text/html; charset=utf-8 432.6392ms
+2024-11-23 22:11:26.328 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/FoodRegistrationTool.styles.css?v=-rXHweyj8R1Srhz14u2t5C6l8wvZ9AmWgOYZ4nRx8jA - null null
+2024-11-23 22:11:26.332 +01:00 [INF] The file /FoodRegistrationTool.styles.css was not modified
+2024-11-23 22:11:26.332 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/FoodRegistrationTool.styles.css?v=-rXHweyj8R1Srhz14u2t5C6l8wvZ9AmWgOYZ4nRx8jA - 304 null text/css 4.2008ms
+2024-11-23 22:11:27.892 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Create - null null
+2024-11-23 22:11:27.898 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-23 22:11:27.901 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-11-23 22:11:27.902 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Create - 302 0 null 9.6744ms
+2024-11-23 22:11:27.904 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Identity/Account/Login?ReturnUrl=%2FProducer%2FCreate - null null
+2024-11-23 22:11:27.905 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-23 22:11:27.919 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-23 22:11:27.937 +01:00 [INF] Executing handler method FoodRegistrationTool.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-11-23 22:11:27.940 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-11-23 22:11:27.940 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-23 22:11:27.942 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-23 22:11:27.942 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-23 22:11:27.959 +01:00 [INF] Executed page /Account/Login in 39.5937ms
+2024-11-23 22:11:27.959 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-23 22:11:27.959 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Identity/Account/Login?ReturnUrl=%2FProducer%2FCreate - 200 null text/html; charset=utf-8 55.6513ms
+2024-11-23 22:11:42.303 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5015/Identity/Account/Login?ReturnUrl=%2FProducer%2FCreate - application/x-www-form-urlencoded 271
+2024-11-23 22:11:42.308 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-23 22:11:42.308 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-23 22:11:42.352 +01:00 [INF] Executing handler method FoodRegistrationTool.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2024-11-23 22:11:42.426 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-11-23 22:11:42.426 +01:00 [INF] User logged in.
+2024-11-23 22:11:42.426 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2024-11-23 22:11:42.427 +01:00 [INF] Executing LocalRedirectResult, redirecting to /Producer/Create.
+2024-11-23 22:11:42.427 +01:00 [INF] Executed page /Account/Login in 118.2357ms
+2024-11-23 22:11:42.427 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-23 22:11:42.427 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5015/Identity/Account/Login?ReturnUrl=%2FProducer%2FCreate - 302 0 null 124.4337ms
+2024-11-23 22:11:42.429 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Create - null null
+2024-11-23 22:11:42.431 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Create (FoodRegistrationTool)'
+2024-11-23 22:11:42.431 +01:00 [INF] Route matched with {action = "Create", controller = "Producer", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-23 22:11:42.432 +01:00 [INF] Executing ViewResult, running view Create.
+2024-11-23 22:11:42.437 +01:00 [INF] Executed ViewResult - view Create executed in 4.8543ms.
+2024-11-23 22:11:42.437 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Create (FoodRegistrationTool) in 5.0822ms
+2024-11-23 22:11:42.437 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Create (FoodRegistrationTool)'
+2024-11-23 22:11:42.437 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Create - 200 null text/html; charset=utf-8 7.403ms
+2024-11-23 22:11:49.010 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5015/Producer/Create - multipart/form-data; boundary=----WebKitFormBoundaryV1nDtI5HLjEj2fgz 548
+2024-11-23 22:11:49.016 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Create (FoodRegistrationTool)'
+2024-11-23 22:11:49.025 +01:00 [INF] Route matched with {action = "Create", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(FoodRegistrationTool.Models.Producer) on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-23 22:11:49.081 +01:00 [INF] Executing RedirectResult, redirecting to /Producer/Table.
+2024-11-23 22:11:49.081 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Create (FoodRegistrationTool) in 55.9342ms
+2024-11-23 22:11:49.081 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Create (FoodRegistrationTool)'
+2024-11-23 22:11:49.081 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5015/Producer/Create - 302 0 null 70.8042ms
+2024-11-23 22:11:49.083 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Table - null null
+2024-11-23 22:11:49.084 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-23 22:11:49.084 +01:00 [INF] Route matched with {action = "Table", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-23 22:11:49.084 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-23 22:11:49.087 +01:00 [INF] Executed ViewResult - view Table executed in 2.1912ms.
+2024-11-23 22:11:49.087 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 2.5385ms
+2024-11-23 22:11:49.087 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-23 22:11:49.087 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Table - 200 null text/html; charset=utf-8 3.907ms
+2024-11-23 22:19:38.744 +01:00 [INF] Application is shutting down...
