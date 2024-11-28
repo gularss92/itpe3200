@@ -1,6 +1,6 @@
 public class CalculateNutrition
 
-// All values and logic found from: https://en.wikipedia.org/wiki/Nutri-Score
+// All values retrieved from: https://en.wikipedia.org/wiki/Nutri-Score
 {
     public static string CalculateScore(string category, int calories, double saturatedFat, double sugar, double salt, double fibre, double protein, int fruitOrVeg)
     {

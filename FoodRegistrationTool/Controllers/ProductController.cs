@@ -83,6 +83,7 @@ public class ProductController : Controller
             // Checking producer exists
             if (producer == null)
             {
+                _logger.LogError("[ProductController] Producer not found for the ProducerId {ProducerId:0000}", productCreateViewModel.ProducerId);
                 return BadRequest("Producer not found.");
             }
 
@@ -100,25 +101,38 @@ public class ProductController : Controller
             };
 
             // Handle Image Upload
+            /* 
+               FirstOrDefault() is a method that returns the first element of the source,
+               which in this case can only be the variable 'IFormFile ImageFile' from the model Product, or a null reference. 
+               IFormFile accepts file-formats as parameters, such that an image-file can be submitted.
+            */
             var imageFile = Request.Form.Files.FirstOrDefault();
             if (imageFile != null)
             {
+                // Sets absolute path to wwwroot with the property WebRootPath
                 string wwwRootPath = _hostEnvironment.WebRootPath;
+                // Seperates filename and extension (filename.jpeg or filename.png, etc..)
                 string fileName = Path.GetFileNameWithoutExtension(imageFile.FileName);
                 string extension = Path.GetExtension(imageFile.FileName);
+                // Sets time and date of when the image-file is created, and attaches it to the name of the client-file in wwwroot
                 fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                // Get path of where the file will be stored
                 string path = Path.Combine(wwwRootPath, "images/clientImages", fileName);
                 //Console.WriteLine($"Attempting to save file to: {path}");
+                // Creates an object fileStream from the class FileStream which can read and write to the file
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
+                    // Copies contents of imageFile into the object fileStream with async.
                     await imageFile.CopyToAsync(fileStream);
                 }
+                // Get URL of the created image so that it is stored in the DB, and not the ImageFile itself.
                 product.ImageUrl = "/images/clientImages/" + fileName;
                 //Console.Write($"Set url to: {product.ImageUrl}");
 
             }
             else
             {
+                _logger.LogError("[ProductController] ImageUrl not found for the ImageFile {product.ImageUrl}", product.ImageUrl);
                 Console.Write($"No img found, url: {product.ImageUrl}, imgfile: {product.ImageFile}");
             }
 
@@ -226,7 +240,10 @@ public class ProductController : Controller
     [HttpPost]
     public async Task<IActionResult> CalculateNutritionScore(string category, int calories, double saturatedFat, double sugar, double salt, double fibre, double protein, int fruitOrVeg)
     {
+        // Uses the Model CalculateNutrition to get a score which is returned as a JSON-string. 
         var score = CalculateNutrition.CalculateScore(category, calories, saturatedFat, sugar, salt, fibre, protein, fruitOrVeg);
+        // Returned with Json() since the method is called through an AJAX operation, 
+        // which allows for the data to be updated without having to update the page itself.
         return Json(score);
     }
 
