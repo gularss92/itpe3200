@@ -11,8 +11,9 @@ namespace FoodRegistrationTool.Test.Controllers;
 
 public class ProductControllerTests
 {
+    // Positive test - ProductController.Table
     [Fact]
-    public async Task TestTable()
+    public async Task Table_ReturnsViewResultWithProducts_WhenProductsExist()
     {
         // arrange
         var producer = new Producer{ ProducerId = 1, Name = "Producer 1", Address = "Test Road"};
@@ -66,5 +67,45 @@ public class ProductControllerTests
         var productsViewModel = Assert.IsAssignableFrom<ProductsViewModel>(viewResult.ViewData.Model);
         Assert.Equal(2, productsViewModel.Products.Count());
         Assert.Equal(products, productsViewModel.Products);
+    }
+
+    // Negative test - Incomplete filling of form for creating product
+    [Fact]
+    public async Task Create_ReturnsViewResultWithModel_WhenModelStateIsInvalid()
+    {
+        // arrange
+        var producer = new Producer{ ProducerId = 1, Name = "Producer 1", Address = "Test Road"};
+
+        var testProductViewModel= new ProductCreateViewModel
+        {
+            Name = "",
+            Category = "Solid Foods",
+            Nutrition = "Calories: 895kcal, Saturated Fat: 3,7g, Sugar: 2,1g, Salt: 1,3mg, Fibre: g, Protein: 11g, Fruit/Vegetable: %",
+            Price = 35,
+            Description = "110g",
+            NutriScore = "D",
+            ProducerId = 1
+        };
+        var mockProductRepository = new Mock<IProductRepository>();
+        var mockLogger = new Mock<ILogger<ProductController>>();
+        var mockHostEnvironment = new Mock<IWebHostEnvironment>();
+        
+        mockProductRepository.Setup(repo => repo.Create(It.IsAny<Product>())).ReturnsAsync(false);
+
+        var productController = new ProductController(
+            mockProductRepository.Object,
+            mockHostEnvironment.Object,
+            mockLogger.Object
+        );
+        
+        productController.ModelState.AddModelError("Name", "The Name field is required.");
+
+        // act
+        var result = await productController.Create(testProductViewModel);
+        
+        // assert
+        var viewResult = Assert.IsType<ViewResult>(result);
+        var viewItem = Assert.IsAssignableFrom<ProductCreateViewModel>(viewResult.ViewData.Model);
+        Assert.Equal(testProductViewModel, viewItem);
     }
 }
