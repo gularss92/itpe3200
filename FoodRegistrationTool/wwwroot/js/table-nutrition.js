@@ -1,3 +1,10 @@
+/*
+    This js-file takes the data retreived from the controller, 
+    and returns a corresponding letter depending on the calculated score,
+    which is displayed in the table. CSS is present in site.css.
+    
+*/
+
 $(document).ready(function() {
     $('.nutrition-score').each(function() {
         var $this = $(this);

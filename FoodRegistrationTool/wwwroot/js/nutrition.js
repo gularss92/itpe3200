@@ -1,3 +1,8 @@
+/*
+    This js-file uses an AJAX POST operation to send the data used in the create-form and update-form, to the controller,
+    which calculates the data into a score that is returned and updated without having to refresh the page.
+*/
+
 $(document).ready(function() {
     $("#Category, #nutritionInput").on("change", function() {
             calculateNutritionScore();

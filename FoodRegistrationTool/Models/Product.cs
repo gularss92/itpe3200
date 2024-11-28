@@ -13,7 +13,6 @@ namespace FoodRegistrationTool.Models
         public string Category { get; set; } = string.Empty;
         public string Nutrition { get; set; } = string.Empty;
 
-        // Maybe not neccessary
         [Range(0.01, double.MaxValue, ErrorMessage = "The price must be > 0.")]
         public decimal Price { get; set; }
 
@@ -23,7 +22,7 @@ namespace FoodRegistrationTool.Models
         public string? ImageUrl { get; set; }
         public string? NutriScore { get; set; }
 
-        // Doesn't put class in DB
+        // Doesn't put class in DB, handles image upload by using IFormFile which accepts image-files
         [NotMapped]
         [Display(Name = "Upload Image")]
         public IFormFile? ImageFile { get; set; }
