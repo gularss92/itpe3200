@@ -1,0 +1,29 @@
+2024-11-29 14:54:28.088 +01:00 [INF] User profile is available. Using '/Users/kjellwiggo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-29 14:54:28.131 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-29 14:54:28.132 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-29 14:54:28.132 +01:00 [INF] Hosting environment: Development
+2024-11-29 14:54:28.132 +01:00 [INF] Content root path: /Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool
+2024-11-29 14:54:30.613 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Details/1 - null null
+2024-11-29 14:54:30.616 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-11-29 14:54:30.852 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-29 14:54:30.858 +01:00 [INF] Route matched with {action = "Details", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-29 14:54:30.964 +01:00 [INF] Executing ViewResult, running view Details.
+2024-11-29 14:54:31.026 +01:00 [INF] Executed ViewResult - view Details executed in 61.6808ms.
+2024-11-29 14:54:31.026 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool) in 168.1381ms
+2024-11-29 14:54:31.026 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-29 14:54:31.029 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Details/1 - 200 null text/html; charset=utf-8 416.7474ms
+2024-11-29 14:54:31.065 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - null null
+2024-11-29 14:54:31.076 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - 404 0 null 11.0835ms
+2024-11-29 14:54:31.076 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5015/js/nutrition-table.js, Response status code: 404
+2024-11-29 14:54:37.651 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Details/1 - null null
+2024-11-29 14:54:37.692 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-29 14:54:37.692 +01:00 [INF] Route matched with {action = "Details", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-29 14:54:37.696 +01:00 [INF] Executing ViewResult, running view Details.
+2024-11-29 14:54:37.698 +01:00 [INF] Executed ViewResult - view Details executed in 2.2685ms.
+2024-11-29 14:54:37.698 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool) in 5.5802ms
+2024-11-29 14:54:37.698 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-29 14:54:37.698 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Details/1 - 200 null text/html; charset=utf-8 47.5972ms
+2024-11-29 14:54:37.734 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - null null
+2024-11-29 14:54:37.736 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - 404 0 null 1.4882ms
+2024-11-29 14:54:37.736 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5015/js/nutrition-table.js, Response status code: 404
+2024-11-29 14:55:04.019 +01:00 [INF] Application is shutting down...
