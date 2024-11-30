@@ -153,7 +153,19 @@ public class ProductController : Controller
             _logger.LogError("[ProductController] Product not found when updating the ProductId {ProductId:0000}", id);
             return BadRequest("Product not found for the ProductId");
         }
-        return View(product);
+        // Map Product to ProductUpdateViewModel
+       var productUpdateViewModel = new ProductUpdateViewModel
+       {
+           ProductId = product.ProductId,
+           Name = product.Name,
+           Category = product.Category,
+           Nutrition = product.Nutrition,
+           Price = product.Price,
+           Description = product.Description,
+           ProducerId = product.ProducerId,
+           // Map other properties as needed
+       };
+        return View(productUpdateViewModel);
     }
 
     [HttpPost]
@@ -180,6 +192,7 @@ public class ProductController : Controller
                 }
 
                 // Update the product properties
+                product.ProductId = productUpdateViewModel.ProductId;
                 product.Name = productUpdateViewModel.Name;
                 product.Category = productUpdateViewModel.Category;
                 product.Nutrition = productUpdateViewModel.Nutrition;

@@ -5,7 +5,7 @@ namespace FoodRegistrationTool.ViewModels;
 
 public class ProductUpdateViewModel
 {
-    //public int ProductId { get; set; }
+    public int ProductId { get; set; }
     
     [RegularExpression(@"[0-9a-zA-ZæøåÆØÅ. \-]{2,20}", ErrorMessage = "The name must be numbers or letters and between 2 to 20 chars.")]
     [Display(Name = "Product name")]
