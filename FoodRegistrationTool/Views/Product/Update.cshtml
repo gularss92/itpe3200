@@ -1,11 +1,17 @@
-@model Product
+@model ProductUpdateViewModel
 
 <div class="container">
 
     <h2>Update Product</h2>
 
     <form asp-action="Update" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
         <input type="hidden" asp-for="ProductId" />
+        <div class="form-group">
+            <label asp-for="ProducerId"></label><span class="text-danger">*</span>
+            <input asp-for="ProducerId" class="form-control" style="width: fit-content;" />
+            <span asp-validation-for="ProducerId" class="text-danger"></span>
+        </div>
         <div class="form-group">
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control" style="width: fit-content;"/>
@@ -33,7 +39,7 @@
         </div>
         <div class="form-group">
             <label asp-for="Price"></label>
-            <input asp-for="Price" class="form-control" style="width: fit-content;"/>
+            <input type="number" asp-for="Price" class="form-control" style="width: fit-content;"/>
             <span asp-validation-for="Price" class="text-danger"></span>
         </div>
         <div class="form-group">
@@ -65,4 +71,9 @@
 @section Scripts
 {
     <script src="~/js/nutrition.js"></script>
+    <script>
+    document.getElementById('price').addEventListener('input', function (e) {
+        this.value = this.value.replace(',', '.');
+    });
+    </script>
 }
