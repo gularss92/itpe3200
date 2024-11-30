@@ -158,18 +158,36 @@ public class ProductController : Controller
 
     [HttpPost]
     [Authorize]
-    public async Task<IActionResult> Update(int id, [Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description")] Product product)
+    public async Task<IActionResult> Update(int id, [Bind("ProductId,Name,Category,Nutrition,NutriScore,Price,Description,ProducerId")] ProductUpdateViewModel productUpdateViewModel) //Product product)
     {
-        // Må legge inn Logger her
-        if (id != product.ProductId)
-        {
-            return NotFound();
-        }
-
+        
         if (ModelState.IsValid)
         {
             try
             {
+                _logger.LogInformation("[ProductController] Product can be updated");
+                // Retrieve the existing product from the repository
+                var product = await _productRepository.GetProductById(id);
+                if (product == null)
+                {
+                    _logger.LogError("[ProductController] Product not found for the ProductId {ProductId:0000}", id);
+                    return NotFound();
+                }
+                if (id != product.ProductId)
+                {
+                    _logger.LogError("[ProductController] ProductId not found");
+                    return NotFound();
+                }
+
+                // Update the product properties
+                product.Name = productUpdateViewModel.Name;
+                product.Category = productUpdateViewModel.Category;
+                product.Nutrition = productUpdateViewModel.Nutrition;
+                product.NutriScore = productUpdateViewModel.NutriScore;
+                product.Price = productUpdateViewModel.Price;
+                product.Description = productUpdateViewModel.Description;
+                product.ProducerId = productUpdateViewModel.ProducerId;
+
                 // Handle Image Upload
                 var imageFile = Request.Form.Files.FirstOrDefault();
                 if (imageFile != null)
@@ -186,29 +204,46 @@ public class ProductController : Controller
                     product.ImageUrl = "/images/clientImages/" + fileName;
 
                     // Delete old image
-                    var oldImagePath = Path.Combine(wwwRootPath, "images/clientImages", product.ImageUrl);
+                    var oldImagePath = Path.Combine(wwwRootPath, "images/clientImages", product.ImageUrl);//product.ImageUrl);
                     if (System.IO.File.Exists(oldImagePath))
                     {
                         System.IO.File.Delete(oldImagePath);
                     }
                 }
 
+                _logger.LogInformation("[ProductController] Product can be updated for product {product.ProductId}", product.ProductId);
+
                 await _productRepository.Update(product);
+
 
             }
 
             catch (DbUpdateConcurrencyException)
             {
-                if (product == null)
+                if (productUpdateViewModel == null)//product == null)
                 {
+                    _logger.LogError("[Controller] Error updating");
                     return NotFound();
                 }
-                else throw;
+                else {
+                    _logger.LogError("[Controller] Error updating 2");
+                    throw;
+                }
             }
 
             return RedirectToAction(nameof(Table));
         }
-        return View(product);
+        else
+        {
+            // Log the errors in ModelState
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                _logger.LogError(error.ErrorMessage);
+            }
+        }
+        
+
+        return View(productUpdateViewModel);//product);
     }
 
 
@@ -241,7 +276,10 @@ public class ProductController : Controller
     public async Task<IActionResult> CalculateNutritionScore(string category, int calories, double saturatedFat, double sugar, double salt, double fibre, double protein, int fruitOrVeg)
     {
         // Uses the Model CalculateNutrition to get a score which is returned as a JSON-string. 
-        var score = CalculateNutrition.CalculateScore(category, calories, saturatedFat, sugar, salt, fibre, protein, fruitOrVeg);
+        // Runs the calculation in a separate task to avoid blocking
+        var score = await Task.Run(() => 
+            CalculateNutrition.CalculateScore(category, calories, saturatedFat, sugar, salt, fibre, protein, fruitOrVeg)
+        );
         // Returned with Json() since the method is called through an AJAX operation, 
         // which allows for the data to be updated without having to update the page itself.
         return Json(score);
