@@ -1,9 +1,9 @@
 @model ProductsViewModel
 <div class="container">
     <h1>List of Registered Products (@Model.CurrentViewName View)</h1>
-    <div class="btn-group mb-2">
-        <a href="/Product/Table" class="btn btn-outline-primary active"><i class="bi bi-table"></i></a>
-        <a href="/Product/Grid" class="btn btn-outline-primary"><i class="bi bi-grid"></i></a>
+    <div class="btn-group mb-2" role="group" aria-label="Product View Buttons">
+        <a href="/Product/Table" class="btn btn-outline-primary active"><i class="bi bi-table"></i> Table</a>
+        <a href="/Product/Grid" class="btn btn-outline-primary"><i class="bi bi-grid"></i> Grid</a>
     </div>
     <a class="btn btn-primary mb-2" asp-controller="Product" asp-action="Create"><i class="bi bi-pencil-square"></i>
         New</a>
