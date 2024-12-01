@@ -1,0 +1,82 @@
+2024-11-30 21:42:50.449 +01:00 [INF] User profile is available. Using '/Users/kjellwiggo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-30 21:42:50.492 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-30 21:42:50.493 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-30 21:42:50.493 +01:00 [INF] Hosting environment: Development
+2024-11-30 21:42:50.493 +01:00 [INF] Content root path: /Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool
+2024-11-30 21:42:52.988 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Delete/1 - null null
+2024-11-30 21:42:52.990 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-11-30 21:42:53.229 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Delete (FoodRegistrationTool)'
+2024-11-30 21:42:53.234 +01:00 [INF] Route matched with {action = "Delete", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:42:53.340 +01:00 [INF] Executing ViewResult, running view Delete.
+2024-11-30 21:42:53.398 +01:00 [INF] Executed ViewResult - view Delete executed in 58.3472ms.
+2024-11-30 21:42:53.399 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Delete (FoodRegistrationTool) in 164.7396ms
+2024-11-30 21:42:53.399 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Delete (FoodRegistrationTool)'
+2024-11-30 21:42:53.402 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Delete/1 - 200 null text/html; charset=utf-8 414.885ms
+2024-11-30 21:43:24.468 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Table - null null
+2024-11-30 21:43:24.492 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:24.495 +01:00 [INF] Route matched with {action = "Table", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:43:24.505 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-30 21:43:24.512 +01:00 [INF] Executed ViewResult - view Table executed in 8.2398ms.
+2024-11-30 21:43:24.513 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool) in 17.1849ms
+2024-11-30 21:43:24.513 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:24.513 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Table - 200 null text/html; charset=utf-8 44.8256ms
+2024-11-30 21:43:26.970 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Table - null null
+2024-11-30 21:43:27.015 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:27.015 +01:00 [INF] Route matched with {action = "Table", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:43:27.017 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-30 21:43:27.018 +01:00 [INF] Executed ViewResult - view Table executed in 1.669ms.
+2024-11-30 21:43:27.018 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool) in 3.065ms
+2024-11-30 21:43:27.018 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:27.019 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Table - 200 null text/html; charset=utf-8 48.341ms
+2024-11-30 21:43:44.567 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/ - null null
+2024-11-30 21:43:44.571 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-30 21:43:44.573 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodRegistrationTool.Controllers.HomeController (FoodRegistrationTool).
+2024-11-30 21:43:44.575 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-30 21:43:44.584 +01:00 [INF] Executed ViewResult - view Index executed in 9.8422ms.
+2024-11-30 21:43:44.585 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool) in 11.0569ms
+2024-11-30 21:43:44.585 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-30 21:43:44.585 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/ - 200 null text/html; charset=utf-8 17.8619ms
+2024-11-30 21:43:45.022 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/ - null null
+2024-11-30 21:43:45.026 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-30 21:43:45.026 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodRegistrationTool.Controllers.HomeController (FoodRegistrationTool).
+2024-11-30 21:43:45.026 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-30 21:43:45.028 +01:00 [INF] Executed ViewResult - view Index executed in 1.8415ms.
+2024-11-30 21:43:45.028 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool) in 2.1559ms
+2024-11-30 21:43:45.028 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-30 21:43:45.028 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/ - 200 null text/html; charset=utf-8 5.9733ms
+2024-11-30 21:43:46.921 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Table - null null
+2024-11-30 21:43:46.924 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:46.927 +01:00 [INF] Route matched with {action = "Table", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-30 21:43:46.947 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-30 21:43:46.980 +01:00 [INF] Executed ViewResult - view Table executed in 32.9162ms.
+2024-11-30 21:43:46.980 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 52.8365ms
+2024-11-30 21:43:46.980 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:46.980 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Table - 200 null text/html; charset=utf-8 59.2542ms
+2024-11-30 21:43:55.431 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Details/2 - null null
+2024-11-30 21:43:55.435 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-30 21:43:55.439 +01:00 [INF] Route matched with {action = "Details", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:43:55.443 +01:00 [INF] Executing ViewResult, running view Details.
+2024-11-30 21:43:55.451 +01:00 [INF] Executed ViewResult - view Details executed in 8.5574ms.
+2024-11-30 21:43:55.451 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool) in 12.1688ms
+2024-11-30 21:43:55.451 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-30 21:43:55.451 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Details/2 - 200 null text/html; charset=utf-8 20.0678ms
+2024-11-30 21:43:55.460 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - null null
+2024-11-30 21:43:55.464 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - 404 0 null 3.4274ms
+2024-11-30 21:43:55.465 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5015/js/nutrition-table.js, Response status code: 404
+2024-11-30 21:43:56.533 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Table - null null
+2024-11-30 21:43:56.535 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:56.535 +01:00 [INF] Route matched with {action = "Table", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-30 21:43:56.535 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-30 21:43:56.537 +01:00 [INF] Executed ViewResult - view Table executed in 1.8295ms.
+2024-11-30 21:43:56.537 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 2.3142ms
+2024-11-30 21:43:56.537 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-30 21:43:56.537 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Table - 200 null text/html; charset=utf-8 4.3002ms
+2024-11-30 21:43:58.142 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Delete/2 - null null
+2024-11-30 21:43:58.146 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Delete (FoodRegistrationTool)'
+2024-11-30 21:43:58.150 +01:00 [INF] Route matched with {action = "Delete", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-30 21:43:58.159 +01:00 [INF] Executing ViewResult, running view Delete.
+2024-11-30 21:43:58.164 +01:00 [INF] Executed ViewResult - view Delete executed in 5.5484ms.
+2024-11-30 21:43:58.164 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Delete (FoodRegistrationTool) in 14.2401ms
+2024-11-30 21:43:58.164 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Delete (FoodRegistrationTool)'
+2024-11-30 21:43:58.164 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Delete/2 - 200 null text/html; charset=utf-8 22.5094ms
+2024-11-30 21:46:32.297 +01:00 [INF] Application is shutting down...

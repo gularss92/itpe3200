@@ -1,0 +1,31 @@
+2024-11-29 14:44:34.027 +01:00 [INF] User profile is available. Using '/Users/kjellwiggo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-29 14:44:34.072 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-29 14:44:34.073 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-29 14:44:34.073 +01:00 [INF] Hosting environment: Development
+2024-11-29 14:44:34.073 +01:00 [INF] Content root path: /Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool
+2024-11-29 14:44:36.650 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/ - null null
+2024-11-29 14:44:36.654 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-11-29 14:44:36.893 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-29 14:44:36.896 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodRegistrationTool.Controllers.HomeController (FoodRegistrationTool).
+2024-11-29 14:44:36.898 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-29 14:44:36.960 +01:00 [INF] Executed ViewResult - view Index executed in 61.7666ms.
+2024-11-29 14:44:36.960 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool) in 63.9025ms
+2024-11-29 14:44:36.960 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-29 14:44:36.962 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/ - 200 null text/html; charset=utf-8 313.2302ms
+2024-11-29 14:46:55.716 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Table - null null
+2024-11-29 14:46:55.737 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-29 14:46:55.742 +01:00 [INF] Route matched with {action = "Table", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-29 14:46:55.841 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-29 14:46:55.846 +01:00 [INF] Executed ViewResult - view Table executed in 5.5037ms.
+2024-11-29 14:46:55.846 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool) in 104.5887ms
+2024-11-29 14:46:55.846 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-29 14:46:55.848 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Table - 200 null text/html; charset=utf-8 132.332ms
+2024-11-29 14:46:59.522 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Producer/Table - null null
+2024-11-29 14:46:59.568 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-29 14:46:59.570 +01:00 [INF] Route matched with {action = "Table", controller = "Producer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProducerController (FoodRegistrationTool).
+2024-11-29 14:46:59.578 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-29 14:46:59.626 +01:00 [INF] Executed ViewResult - view Table executed in 48.2528ms.
+2024-11-29 14:46:59.627 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool) in 56.849ms
+2024-11-29 14:46:59.627 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProducerController.Table (FoodRegistrationTool)'
+2024-11-29 14:46:59.627 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Producer/Table - 200 null text/html; charset=utf-8 104.4589ms
+2024-11-29 14:49:11.046 +01:00 [INF] Application is shutting down...

@@ -2,31 +2,31 @@
 
 <div class="container">
 
-    <h3 class="my-5">
+    <h1 class="h1 my-5">
         @Model.Name
-    </h3>
+    </h1>
     <p>
         <a href="/Product/Grid" class="btn btn-outline-secondary">
-            <i class="bi bi-arrow-left"></i>
+            <i class="bi bi-arrow-left"></i> Back
         </a>
     </p>
 
     <div class="row gx-5" enctype="multipart/form-data">
         <img alt="@Model.Name" src="@Model.ImageUrl" class="img-fluid col-5 fixed-height-img-details" />
         <div class="col-7">
-            <h5>@Model.Description</h5>
-            <h3>@Model.Price.ToString("0.00 NOK")</h3>
-            <h6>@Model.Nutrition</h6>
-            <h4 class="text-nowrap">
+            <p>@Model.Description</p>
+            <p>@Model.Price.ToString("0.00 NOK")</p>
+            <p>@Model.Nutrition</p>
+            <p class="text-nowrap">
                 <span class="nutrition-score" data-score="@Model.NutriScore">@Model.NutriScore</span>
-            </h4>
+            </p>
             <hr />
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group" aria-label="Product Action Buttons">
                 <a type="button" class="btn btn-primary" asp-action="Update" asp-route-id="@Model.ProductId">
-                    <i class="bi bi-pencil-square"></i>
+                    <i class="bi bi-pencil-square"></i> Update
                 </a>
                 <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.ProductId">
-                    <i class="bi bi-trash"></i>
+                    <i class="bi bi-trash"></i> Delete
                 </a>
             </div>
         </div>

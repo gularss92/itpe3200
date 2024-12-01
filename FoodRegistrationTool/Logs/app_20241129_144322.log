@@ -1,0 +1,15 @@
+2024-11-29 14:43:23.000 +01:00 [INF] User profile is available. Using '/Users/kjellwiggo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-29 14:43:23.050 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-29 14:43:23.051 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-29 14:43:23.051 +01:00 [INF] Hosting environment: Development
+2024-11-29 14:43:23.051 +01:00 [INF] Content root path: /Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool
+2024-11-29 14:43:28.708 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/ - null null
+2024-11-29 14:43:28.711 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-11-29 14:43:29.097 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-29 14:43:29.099 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodRegistrationTool.Controllers.HomeController (FoodRegistrationTool).
+2024-11-29 14:43:29.101 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-29 14:43:29.166 +01:00 [INF] Executed ViewResult - view Index executed in 65.5533ms.
+2024-11-29 14:43:29.167 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool) in 67.6975ms
+2024-11-29 14:43:29.167 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.HomeController.Index (FoodRegistrationTool)'
+2024-11-29 14:43:29.170 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/ - 200 null text/html; charset=utf-8 462.0021ms
+2024-11-29 14:44:29.717 +01:00 [INF] Application is shutting down...
