@@ -5,12 +5,12 @@
         <img src="@Model.ImageUrl" class="card-img-top p-4 fixed-height-img-card" alt="@Model.Name" />
         <div class="card-body">
             <div class="card-title">
-                <h5 class="h5 text-start">
+                <h2 class="h5 text-start">
                     <a asp-asp-controller="Product" asp-action="Details" asp-route-id="@Model.ProductId">@Model.Name</a>
-                </h5>
-                <h5 class="card-text">
+                </h2>
+                <p class="card-text">
                     <span class="nutrition-score" data-score="@Model.NutriScore">@Model.NutriScore</span>
-                </h5>
+                </p>
                 <p class="card-text">
                     @Model.Nutrition
                 </p>

@@ -1,0 +1,61 @@
+2024-11-30 21:34:59.387 +01:00 [INF] User profile is available. Using '/Users/kjellwiggo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-30 21:34:59.435 +01:00 [INF] Now listening on: http://localhost:5015
+2024-11-30 21:34:59.437 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-30 21:34:59.437 +01:00 [INF] Hosting environment: Development
+2024-11-30 21:34:59.437 +01:00 [INF] Content root path: /Users/kjellwiggo/Developer/GitHub/itpe3200/FoodRegistrationTool
+2024-11-30 21:35:01.482 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Grid - null null
+2024-11-30 21:35:01.484 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-11-30 21:35:01.711 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-30 21:35:01.715 +01:00 [INF] Route matched with {action = "Grid", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:35:01.798 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-30 21:35:01.861 +01:00 [INF] Executed ViewResult - view Grid executed in 62.8695ms.
+2024-11-30 21:35:01.861 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool) in 145.9152ms
+2024-11-30 21:35:01.861 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-30 21:35:01.864 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Grid - 200 null text/html; charset=utf-8 382.3715ms
+2024-11-30 21:35:07.364 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Grid - null null
+2024-11-30 21:35:07.388 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-30 21:35:07.388 +01:00 [INF] Route matched with {action = "Grid", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:35:07.392 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-30 21:35:07.395 +01:00 [INF] Executed ViewResult - view Grid executed in 3.2646ms.
+2024-11-30 21:35:07.395 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool) in 6.5755ms
+2024-11-30 21:35:07.395 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-30 21:35:07.395 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Grid - 200 null text/html; charset=utf-8 31.2042ms
+2024-11-30 21:35:10.890 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Details/1 - null null
+2024-11-30 21:35:10.933 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-30 21:35:10.937 +01:00 [INF] Route matched with {action = "Details", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:35:10.977 +01:00 [INF] Executing ViewResult, running view Details.
+2024-11-30 21:35:10.979 +01:00 [INF] Executed ViewResult - view Details executed in 2.5723ms.
+2024-11-30 21:35:10.979 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool) in 41.8121ms
+2024-11-30 21:35:10.979 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-30 21:35:10.979 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Details/1 - 200 null text/html; charset=utf-8 89.4808ms
+2024-11-30 21:35:10.995 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - null null
+2024-11-30 21:35:10.996 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - 404 0 null 1.1297ms
+2024-11-30 21:35:10.997 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5015/js/nutrition-table.js, Response status code: 404
+2024-11-30 21:35:20.546 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Details/1 - null null
+2024-11-30 21:35:20.550 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-30 21:35:20.550 +01:00 [INF] Route matched with {action = "Details", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:35:20.555 +01:00 [INF] Executing ViewResult, running view Details.
+2024-11-30 21:35:20.557 +01:00 [INF] Executed ViewResult - view Details executed in 2.1272ms.
+2024-11-30 21:35:20.557 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool) in 7.3868ms
+2024-11-30 21:35:20.557 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Details (FoodRegistrationTool)'
+2024-11-30 21:35:20.557 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Details/1 - 200 null text/html; charset=utf-8 11.7377ms
+2024-11-30 21:35:20.567 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - null null
+2024-11-30 21:35:20.569 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/js/nutrition-table.js - 404 0 null 1.8105ms
+2024-11-30 21:35:20.569 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5015/js/nutrition-table.js, Response status code: 404
+2024-11-30 21:35:22.112 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Grid - null null
+2024-11-30 21:35:22.114 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-30 21:35:22.114 +01:00 [INF] Route matched with {action = "Grid", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:35:22.114 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-30 21:35:22.115 +01:00 [INF] Executed ViewResult - view Grid executed in 1.0315ms.
+2024-11-30 21:35:22.115 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool) in 1.4504ms
+2024-11-30 21:35:22.115 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Grid (FoodRegistrationTool)'
+2024-11-30 21:35:22.115 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Grid - 200 null text/html; charset=utf-8 2.8183ms
+2024-11-30 21:35:23.958 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5015/Product/Table - null null
+2024-11-30 21:35:23.962 +01:00 [INF] Executing endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-30 21:35:23.965 +01:00 [INF] Route matched with {action = "Table", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller FoodRegistrationTool.Controllers.ProductController (FoodRegistrationTool).
+2024-11-30 21:35:23.968 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-30 21:35:23.978 +01:00 [INF] Executed ViewResult - view Table executed in 11.1505ms.
+2024-11-30 21:35:23.979 +01:00 [INF] Executed action FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool) in 13.1292ms
+2024-11-30 21:35:23.979 +01:00 [INF] Executed endpoint 'FoodRegistrationTool.Controllers.ProductController.Table (FoodRegistrationTool)'
+2024-11-30 21:35:23.979 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5015/Product/Table - 200 null text/html; charset=utf-8 20.4546ms
+2024-11-30 21:37:10.811 +01:00 [INF] Application is shutting down...
