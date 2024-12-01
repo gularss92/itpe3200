@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <h2>Update Product</h2>
+    <h2 class="h2">Update Product</h2>
 
     <form asp-action="Update" enctype="multipart/form-data">
         <div asp-validation-summary="All" class="text-danger"></div>
@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" style="width: fit-content;"/>
+            <input asp-for="Name" class="form-control" style="width: fit-content;" />
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="form-group">
@@ -28,18 +28,20 @@
         </div>
         <div class="form-group">
             <label asp-for="Nutrition"></label><span class="text-danger">*</span>
-            <input asp-for="Nutrition" id="nutritionInput" class="form-control" value="Calories: kcal, Saturated Fat: g, Sugar: g, Salt: mg, Fibre: g, Protein: g, Fruit/Vegetable: %"/>
+            <input asp-for="Nutrition" id="nutritionInput" class="form-control"
+                value="Calories: kcal, Saturated Fat: g, Sugar: g, Salt: mg, Fibre: g, Protein: g, Fruit/Vegetable: %" />
             <span asp-validation-for="Nutrition" class="text-danger">Per 100g/ml</span>
         </div>
         <div class="form-group">
             <label asp-for="NutriScore">Nutrition Score:</label>
             <div id="scoreWrapper" class="d-inline-block p-2 rounded">
-                <input asp-for="NutriScore" type="text" id="NutriScore" class="form-control" style="width: fit-content; background: transparent; border: none; color: inherit;" readonly/>
+                <input asp-for="NutriScore" type="text" id="NutriScore" class="form-control"
+                    style="width: fit-content; background: transparent; border: none; color: inherit;" readonly />
             </div>
         </div>
         <div class="form-group">
             <label asp-for="Price"></label>
-            <input type="number" asp-for="Price" class="form-control" style="width: fit-content;"/>
+            <input type="number" asp-for="Price" class="form-control" style="width: fit-content;" />
             <span asp-validation-for="Price" class="text-danger"></span>
         </div>
         <div class="form-group">
@@ -59,8 +61,8 @@
             <span>Old Image:</span>
             <img src="@Model.ImageUrl" alt="@Model.Name" style="max-width: 200px; max-height: 200px;" />
         }
-        <br></br>   
-        <p> 
+        <br></br>
+        <p>
             <button type="submit" class="btn btn-primary">Save Changes</button>
             <a asp-action="Table" class="btn btn-secondary">Cancel</a>
         </p>
@@ -72,8 +74,8 @@
 {
     <script src="~/js/nutrition.js"></script>
     <script>
-    document.getElementById('price').addEventListener('input', function (e) {
-        this.value = this.value.replace(',', '.');
-    });
+        document.getElementById('price').addEventListener('input', function (e) {
+            this.value = this.value.replace(',', '.');
+        });
     </script>
 }
