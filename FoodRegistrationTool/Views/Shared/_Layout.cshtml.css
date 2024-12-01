@@ -7,17 +7,6 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-.home-header{
-  transition: opacity 0.15s;
-
-}
-.home-header:hover {
-  opacity: 0.8;
-}
-.home-header:active{
-  opacity: 0.5;
-}
-
 a {
   color: #0077cc;
 }
