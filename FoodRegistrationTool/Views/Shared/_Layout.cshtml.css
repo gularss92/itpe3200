@@ -7,6 +7,17 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.home-header{
+  transition: opacity 0.15s;
+
+}
+.home-header:hover {
+  opacity: 0.8;
+}
+.home-header:active{
+  opacity: 0.5;
+}
+
 a {
   color: #0077cc;
 }
@@ -48,12 +59,14 @@ button.accept-policy {
 }
 
 .nav-item:hover{
-  background-color:lightgray;
-  transition: 0.5s;
-  font-size: 14px;
+  opacity: 0.8;
 }
 
 .nav-item{
-  transition: 0.5s;
+  transition: opacity 0.15s;
 }
+.nav-item:active{
+  opacity: 0.5;
+}
+
 
